@@ -5,6 +5,7 @@ import Grid from "../components/Grid";
 import Page from "../components/Page";
 import Teaser from "../components/Teaser";
 import Banner from "../components/Banner";
+import Section from "../components/Section";
 
 const components = {
   feature: Feature,
@@ -12,6 +13,7 @@ const components = {
   teaser: Teaser,
   page: Page,
   banner: Banner,
+  section: Section,
 };
  
 

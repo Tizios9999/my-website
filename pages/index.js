@@ -15,7 +15,8 @@ export default function Home(props) {
    
         <header>
           <h1>
-            { story ? story.name : 'My Site' }
+            {/* { story ? story.name : 'My Site' } */}
+            Sito Davide
           </h1>
         </header>
    
