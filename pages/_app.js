@@ -6,7 +6,7 @@ import Page from "../components/Page";
 import Teaser from "../components/Teaser";
 import Banner from "../components/Banner";
 import Section from "../components/Section";
-import About from "../components/About";
+import About from "../components/About/About";
 
 const components = {
   feature: Feature,
