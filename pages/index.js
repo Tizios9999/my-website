@@ -1,5 +1,6 @@
 import Head from "next/head"
 import styles from "../styles/Home.module.scss"
+import Navbar from "../components/Navbar/Navbar"
  
 import { getStoryblokApi , StoryblokComponent,  useStoryblokState,} from "@storyblok/react"
  
@@ -14,10 +15,9 @@ export default function Home(props) {
         </Head>
    
         <header>
-          <h1>
-            {/* { story ? story.name : 'My Site' } */}
-            Sito Davide
-          </h1>
+
+          <Navbar />
+          
         </header>
    
          <StoryblokComponent blok={story.content} />
