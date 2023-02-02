@@ -3,7 +3,8 @@ import styles from "./About.module.scss"
  
 const About = ({ blok }) => {
   return <div {...storyblokEditable(blok)} className={styles["container"]}>
-            <h1>{blok.title}</h1>
+            <h1>About Davide Santonocito</h1>
+            <h2>{blok.title}</h2>
             <p>{blok.description}</p>
         </div>;
 };
