@@ -1,7 +1,9 @@
 import { storyblokEditable } from "@storyblok/react";
  
 const Banner = ({ blok }) => {
-  return <h2 {...storyblokEditable(blok)}>{blok.title}</h2>;
+  return <div {...storyblokEditable(blok)}>
+            <img src={blok.image.filename} alt={blok.image.name}></img>
+        </div>;
 };
  
 export default Banner;
