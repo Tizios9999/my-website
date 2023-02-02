@@ -1,0 +1,14 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.nav-menu {
+    
+    display: none;
+    
+    li {
+        list-style-type: none;
+    }
+}

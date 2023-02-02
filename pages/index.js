@@ -10,17 +10,20 @@ export default function Home(props) {
   return (
     <div className={styles.container}>
         <Head>
+
           <title>Davide Santonocito</title>
           <link rel="icon" href="/favicon.ico" />
+          
         </Head>
    
         <header>
 
           <Navbar />
-          
+
         </header>
    
          <StoryblokComponent blok={story.content} />
+
       </div>
   )
 }
