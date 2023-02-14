@@ -1,0 +1,14 @@
+.container {
+    height: 200px;
+    border: 1px solid white;
+    margin: 30px;
+}
+
+.img-wrapper {
+    max-height: 100px;
+    
+    img {
+    width: 100%;
+    height: 100%;
+    }
+}

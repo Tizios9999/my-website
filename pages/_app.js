@@ -7,11 +7,13 @@ import Teaser from "../components/Teaser";
 import Banner from "../components/Banner";
 import Section from "../components/Section";
 import About from "../components/About/About";
+import Slider from "../components/Slider/Slider";
 
 const components = {
   feature: Feature,
   grid: Grid,
   teaser: Teaser,
+  slider: Slider,
   page: Page,
   banner: Banner,
   section: Section,
