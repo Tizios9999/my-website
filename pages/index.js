@@ -1,6 +1,7 @@
 import Head from "next/head"
 import styles from "../styles/Home.module.scss"
-import Navbar from "../components/Navbar/Navbar"
+import Led from "../components/LedPanel/Led"
+import LedPanel from "../components/LedPanel/LedPanel"
  
 import { getStoryblokApi , StoryblokComponent,  useStoryblokState,} from "@storyblok/react"
  
@@ -18,7 +19,8 @@ export default function Home(props) {
    
         <header>
 
-          <Navbar />
+          <LedPanel />
+
 
         </header>
    
