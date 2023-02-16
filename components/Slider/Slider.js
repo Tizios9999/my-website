@@ -16,21 +16,18 @@ const Slider = ({ blok }) => {
             {console.log(blok.cards, "Cards")}
             {blok.cards.map((card) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide className={styles["card-container"]}>
                 <div>
                     <h2>{card.title}</h2>
                     <div className={styles["img-wrapper"]}>
                         <img src={card.image.filename}></img>
                     </div>
-                    <p>{card.description}</p>
+                    <div className={styles["desc"]}><p>{card.description}</p></div>
                 </div>
                 </SwiperSlide>
             )
             })}
             
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
             </Swiper>
         </div>
     </div>
