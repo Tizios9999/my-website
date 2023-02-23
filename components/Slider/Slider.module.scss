@@ -1,7 +1,14 @@
-.container {
+.blok-container {
+    display: flex;
+    justify-content: center;
+}
+
+.slider-container {
     width: 50%;
     border: 1px solid white;
     margin: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 .card-container {

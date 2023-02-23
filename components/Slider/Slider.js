@@ -5,8 +5,8 @@ import 'swiper/css';
  
 const Slider = ({ blok }) => {
 
-  return <div {...storyblokEditable(blok)}>
-    <div className={styles["container"]}>
+  return <div className={styles["blok-container"]} {...storyblokEditable(blok)}>
+    <div className={styles["slider-container"]}>
           <Swiper
             spaceBetween={50}
             slidesPerView={1}
