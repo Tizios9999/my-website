@@ -6,7 +6,11 @@ import 'swiper/css';
 const Slider = ({ blok }) => {
 
   return <div className={styles["blok-container"]} {...storyblokEditable(blok)}>
-    <div className={styles["slider-container"]}>
+          <h2>Projects</h2>
+          <div className={styles["slider-container"]}>
+            <div className={styles["card-wrapper"]}>
+
+            
           <Swiper
             spaceBetween={50}
             slidesPerView={1}
@@ -18,17 +22,19 @@ const Slider = ({ blok }) => {
               return (
                 <SwiperSlide className={styles["card-container"]}>
                 <div>
-                    <h2>{card.title}</h2>
+                    <h3>{card.title}</h3>
                     <div className={styles["img-wrapper"]}>
                         <img src={card.image.filename}></img>
                     </div>
                     <div className={styles["desc"]}><p>{card.description}</p></div>
                 </div>
                 </SwiperSlide>
+
             )
             })}
             
             </Swiper>
+            </div>
         </div>
     </div>
 };

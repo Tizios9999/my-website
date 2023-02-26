@@ -1,14 +1,20 @@
 .blok-container {
     display: flex;
     justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    height: 95vh;
 }
 
 .slider-container {
-    width: 50%;
+    width: 100%;
     border: 1px solid white;
-    margin: 30px;
     display: flex;
     justify-content: center;
+}
+
+.card-wrapper {
+    width: 100%;
 }
 
 .card-container {
