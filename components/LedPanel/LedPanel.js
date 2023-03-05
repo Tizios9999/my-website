@@ -27,7 +27,7 @@ function LedPanel(props) {
         return ledArray;
     }
     
-    const panelArray = generatePanelStream(ledLights2).map((card) => {
+    const panelArray = generatePanelStream(ledLights).map((card) => {
 
       return (
             <Led highlighted={card}/>
@@ -35,7 +35,7 @@ function LedPanel(props) {
     })
 
     return ( 
-        <div className={styles["panel-container"]}>
+        <div onClick={props.onclick} className={styles["panel-container"]}>
             <div className={styles["led-grid"]}>{panelArray}</div>
         </div>
         )

@@ -1,9 +1,20 @@
 import styles from "./Navbar.module.scss"
- 
-const Navbar = () => (
+import  {useState} from "react"
+import LedPanel from "../LedPanel/LedPanel"
+
+const Navbar = () =>
+{
+  //Toggle menu
+  const [menuVisibility, setMenuVisibility] = useState(false)
+
+  function toggleMenu(){
+    setMenuVisibility(!menuVisibility)
+  }
+  return (
+  <>
+  <LedPanel onclick={toggleMenu} />
   <nav className={styles["navbar"]}>
-    <div>X</div>
-    <div className={styles["nav-menu"]}>
+    {menuVisibility && <div className={styles["nav-menu"]}>
         <ul>
             <li>Home</li>
             <li>About</li>
@@ -12,8 +23,9 @@ const Navbar = () => (
             <li>Curriculum</li>
             <li>Contact Me</li>
         </ul>
-    </div>
+    </div>}
   </nav>
-);
+  </>
+);}
  
 export default Navbar;
