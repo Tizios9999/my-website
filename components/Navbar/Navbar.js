@@ -1,5 +1,5 @@
 import styles from "./Navbar.module.scss"
-import  {useState} from "react"
+import  {useState, useEffect} from "react"
 import LedPanel from "../LedPanel/LedPanel"
 
 const Navbar = () =>
@@ -10,11 +10,20 @@ const Navbar = () =>
   function toggleMenu(){
     setMenuVisibility(!menuVisibility)
   }
+
+  useEffect(() => {
+    if (menuVisibility) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "auto"
+    }
+  }, [menuVisibility])
+
   return (
   <>
   <LedPanel onclick={toggleMenu} />
-  <nav className={styles["navbar"]}>
-    {menuVisibility && <div className={styles["nav-menu"]}>
+  {menuVisibility && <nav className={styles["navbar"]}>
+     <div className={styles["nav-menu"]}>
         <ul>
             <li>Home</li>
             <li>About</li>
@@ -23,8 +32,8 @@ const Navbar = () =>
             <li>Curriculum</li>
             <li>Contact Me</li>
         </ul>
-    </div>}
-  </nav>
+    </div>
+  </nav>}
   </>
 );}
  

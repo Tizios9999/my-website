@@ -27,7 +27,7 @@ function LedPanel(props) {
         return ledArray;
     }
     
-    const panelArray = generatePanelStream(ledLights).map((card) => {
+    const panelArray = generatePanelStream(ledLights2).map((card) => {
 
       return (
             <Led highlighted={card}/>
