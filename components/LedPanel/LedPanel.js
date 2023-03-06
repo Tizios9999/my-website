@@ -35,7 +35,7 @@ function LedPanel(props) {
     })
 
     return ( 
-        <div className={styles["panel-container"]}>
+        <div onClick={props.onclick} className={styles["panel-container"]}>
             <div className={styles["led-grid"]}>{panelArray}</div>
         </div>
         )

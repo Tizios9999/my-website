@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Navbar from "../components/Navbar/Navbar"
 import styles from "../styles/Home.module.scss"
 import Led from "../components/LedPanel/Led"
 import LedPanel from "../components/LedPanel/LedPanel"
@@ -11,20 +12,15 @@ export default function Home(props) {
   return (
     <div className={styles.container}>
         <Head>
-
+          
           <title>Davide Santonocito</title>
           <link rel="icon" href="/favicon.ico" />
           
         </Head>
    
-        <header>
-
-          <LedPanel />
-
-
-        </header>
+        <Navbar></Navbar>
    
-         <StoryblokComponent blok={story.content} />
+        <StoryblokComponent blok={story.content} />
 
       </div>
   )

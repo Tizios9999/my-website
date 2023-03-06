@@ -10,9 +10,10 @@
     "proxy": "mkcert -install && mkcert localhost && local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem"
   },
   "dependencies": {
+    "@storyblok/react": "^2.0.12",
     "classnames": "^2.3.2",
     "next": "12.2.5",
-    "react": "18.2.0",
+    "react": "^18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.58.0",
     "swiper": "^9.0.5"
