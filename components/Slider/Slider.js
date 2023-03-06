@@ -5,7 +5,8 @@ import 'swiper/css';
  
 const Slider = ({ blok }) => {
 
-  return <div className={styles["blok-container"]} {...storyblokEditable(blok)}>
+  return  <section className={styles["section-container"]}>
+          <div className={styles["blok-container"]} {...storyblokEditable(blok)}>
           <h2>Projects</h2>
           <div className={styles["slider-container"]}>
             <div className={styles["card-wrapper"]}>
@@ -37,6 +38,7 @@ const Slider = ({ blok }) => {
             </div>
         </div>
     </div>
+    </section>
 };
  
 export default Slider;
