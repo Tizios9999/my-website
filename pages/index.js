@@ -1,26 +1,22 @@
 import Head from "next/head"
-import Navbar from "../components/Navbar/Navbar"
 import styles from "../styles/Home.module.scss"
-import Led from "../components/LedPanel/Led"
-import LedPanel from "../components/LedPanel/LedPanel"
+import Layout from "../components/Layout";
  
 import { getStoryblokApi , StoryblokComponent,  useStoryblokState,} from "@storyblok/react"
  
-export default function Home(props) {
-  const story = props.story
+export default function Home({ story }) {
+  story = useStoryblokState(story);
  
   return (
     <div className={styles.container}>
         <Head>
-          
           <title>Davide Santonocito</title>
           <link rel="icon" href="/favicon.ico" />
-          
         </Head>
-   
-        <Navbar></Navbar>
-   
+        
+        <Layout>
         <StoryblokComponent blok={story.content} />
+        </Layout>
 
       </div>
   )
