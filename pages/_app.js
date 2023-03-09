@@ -8,6 +8,7 @@ import Banner from "../components/Banner";
 import Section from "../components/Section";
 import About from "../components/About/About";
 import Slider from "../components/Slider/Slider";
+import Article from "../components/Article";
 
 const components = {
   feature: Feature,
@@ -18,6 +19,7 @@ const components = {
   banner: Banner,
   section: Section,
   about: About,
+  article:Article,
 };
  
 
