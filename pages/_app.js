@@ -3,12 +3,14 @@ import { storyblokInit, apiPlugin } from "@storyblok/react";
 import Feature from "../components/Feature";
 import Grid from "../components/Grid";
 import Page from "../components/Page";
+import Article from "../components/Article";
 import Teaser from "../components/Teaser";
 import Banner from "../components/Banner";
 import Section from "../components/Section";
 import About from "../components/About/About";
 import Slider from "../components/Slider/Slider";
-import Article from "../components/Article";
+import AllArticles from "../components/AllArticles";
+import ArticleTeaser from "../components/ArticleTeaser";
 
 const components = {
   feature: Feature,
@@ -16,10 +18,12 @@ const components = {
   teaser: Teaser,
   slider: Slider,
   page: Page,
+  article:Article,
   banner: Banner,
   section: Section,
   about: About,
-  article:Article,
+  allArticles : AllArticles,
+  articleTeaser: ArticleTeaser,
 };
  
 
