@@ -5,7 +5,7 @@ import Grid from "../components/Grid";
 import Page from "../components/Page";
 import Article from "../components/Article";
 import Teaser from "../components/Teaser";
-import Banner from "../components/Banner";
+import Banner from "../components/Banner/Banner";
 import Section from "../components/Section";
 import About from "../components/About/About";
 import Slider from "../components/Slider/Slider";
