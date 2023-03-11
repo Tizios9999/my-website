@@ -1,5 +1,4 @@
 import { storyblokEditable } from "@storyblok/react";
-import { useState } from 'react'
 import styles from './Banner.module.scss';
 import classNames from 'classnames';
 
