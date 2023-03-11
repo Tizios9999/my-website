@@ -1,7 +1,9 @@
+$led-size: 5px;
+
 .led-bg {
     background-color: rgb(25, 25, 25);
-    height: 10px;
-    width: 10px;
+    height: $led-size;
+    width: $led-size;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,9 +11,9 @@
 
 .led {
     border-radius: 50%;
-    height: 8px;
-    width: 8px;
-    background-color:rgb(90, 77, 0);
+    height: $led-size;
+    width: $led-size;
+    background-color:rgb(80, 80, 0);
 }
 
 .on {

@@ -1,26 +1,25 @@
+$panel-size: 32px;
+
 .panel-container {
     position: fixed;
     top: 16px;
     right: 16px;
     z-index: 100;
-    width: 80px;
-    height: 80px;
-    background-color: rgb(25, 25, 25);
-    border: 2px solid rgb(0, 133, 0);
+    width: $panel-size;
+    height: $panel-size;
+    background-color: rgba(25, 25, 25, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
-
-.panel-container:hover {
-    border: 1px solid lawngreen;
+    
 }
 
 .led-grid {
-    background-color: rgb(25, 25, 25);    
-    width: 50px;
+    background-color: rgba(25, 25, 25, 0.9);    
+    width: 32px;
     display: grid;
+    border: 1px solid rgba(25, 25, 25, 0.9);
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
 }
