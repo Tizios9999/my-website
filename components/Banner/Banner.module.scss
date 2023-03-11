@@ -1,4 +1,4 @@
-$turn-on-speed: 0.2s;
+$turn-on-speed: 0.7s;
 
 $neon-rgb1: 1;
 $neon-rgb2: 33;
@@ -14,50 +14,59 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
 
 $neon-size: 16px;
 
+.section-container {
+
+  padding: 20px 20px 200px 20px;
+
+}
+
 
 .neon-window {
-    border: $neon-size solid $neon-color-off;
-    border-radius: $neon-size/2;
-    height: 600px;
-    margin: 20px 20px 200px 20px;
-    color: $text-off;
-    
+  border: $neon-size solid $neon-color-off;
+  border-radius: $neon-size/2;
+  height: 600px;
+  color: $text-off;
+  
 
-    .blok-container {
-        display: flex;
-        height: 100%;
-        text-align: center;
-        justify-content: space-around;
-        flex-flow: column nowrap;
+  .blok-container {
+      display: flex;
+      height: 100%;
+      text-align: center;
+      justify-content: space-around;
+      flex-flow: column nowrap;
 
-        .intro {
-            font-size: 3.5em;
-            text-shadow: 0 0 2px;
-            animation: text_lit $turn-on-speed ease-out;
-            animation-fill-mode: forwards;
-        }
+      .intro {
+          font-size: 3.5em;
+          font-weight: 300;
+          text-shadow: 0 0 2px;
+          animation: text_lit $turn-on-speed ease-out;
+          animation-fill-mode: forwards;
+      }
 
-        .my-name {
-            font-size: 5em;
-            animation: text_lit $turn-on-speed ease-out, 
-                       text_lit_brilliant 1s ease-out;
-            animation-fill-mode: forwards;
-        }
+      .my-name {
+          font-size: 5em;
+          font-weight: 400;
+          animation: text_lit $turn-on-speed ease-out, 
+                     text_lit_brilliant 4s ease-out;
+          animation-fill-mode: forwards;
+      }
 
-        .my-title {
-            font-size: 4em;
-            text-shadow: 0 0 2px;
-            animation: text_lit $turn-on-speed ease-out;
-            animation-fill-mode: forwards;
-        }
+      .my-title {
+          font-size: 4em;
+          font-weight: 300;
+          text-shadow: 0 0 2px;
+          animation: text_lit $turn-on-speed ease-out;
+          animation-fill-mode: forwards;
+      }
 
-    }
+  }
 }
 
 .neon-border-lit {
-    animation: neon_lit $turn-on-speed ease-out;
-    animation-fill-mode: forwards;
+  animation: neon_lit $turn-on-speed ease-out;
+  animation-fill-mode: forwards;
 }
+
 
 // .neon-border-off {
 //     animation: neon_lit $turn-on-speed ease-out;
@@ -81,7 +90,7 @@ $neon-size: 16px;
       text-shadow: 0 0 0px;
     }
     to {
-      text-shadow: 0 0 8px $text-lit;
+      text-shadow: 0 0 10px $text-lit;
     }
   }
 
