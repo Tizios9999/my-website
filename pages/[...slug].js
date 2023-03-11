@@ -13,7 +13,7 @@ export default function Page({ story }) {
   return (
     <div>
       <Head>
-        <title>{story ? story.name : "My Site"}</title>
+        <title>{story ? story.name : "Davide Santonocito"}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
