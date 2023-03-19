@@ -1,0 +1,60 @@
+$neon-size: 16px;
+$turn-on-speed: 1s;
+
+$neon-rgb1: 255;
+$neon-rgb2: 39;
+$neon-rgb3: 0;
+$neon-color-lit: rgb($neon-rgb1, $neon-rgb2, $neon-rgb3);
+$neon-color-off: rgb($neon-rgb1*0.5, $neon-rgb2*0.5, $neon-rgb3*0.5);
+
+$text-rgb1: 255;
+$text-rgb2: 255;
+$text-rgb3: 255;
+$text-lit: rgb($text-rgb1, $text-rgb2, $text-rgb3);
+$text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
+
+.container {
+    min-width: 70%;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    
+    h1, h2, p {
+        animation: text_lit $turn-on-speed ease-out;
+        animation-fill-mode: forwards;
+    }
+}
+
+.neon-border {
+  border: $neon-size solid $neon-color-off;
+  border-radius: $neon-size/2;
+  padding: 50px;
+  color: $text-off;
+  animation: neon_lit $turn-on-speed ease-out;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes text_lit {
+    from {
+      color: $text-off;
+    }
+    to {
+      color: $text-lit;
+    }
+  }
+
+@keyframes neon_lit {
+    from {
+        border: $neon-size solid $neon-color-off;
+        text-shadow: 0 0 0px;
+    }
+    to {
+        border: $neon-size solid $neon-color-lit;
+        box-shadow: 0 0 25px $neon-color-lit,
+        inset 0 0 25px $neon-color-lit,
+        0 0 2px white,
+        inset 0 0 2px white;
+        
+    }
+  }

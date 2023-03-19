@@ -1,5 +1,6 @@
-import ArticleTeaser from "./ArticleTeaser";
+import ArticleTeaser from "../ArticleTeaser/ArticleTeaser";
 import { getStoryblokApi, storyblokEditable } from "@storyblok/react";
+import styles from './AllArticles.module.scss';
  
 import { useState, useEffect } from "react";
  
@@ -22,10 +23,10 @@ const AllArticles = ({ blok }) => {
     getArticles();
 }, []);
   return (
+    //All articles in blog home page
     <>
-      <p className="text-3xl">{blok.title}</p>
-      <div
-        className="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-3   lg:px-24 md:px-16"
+      <h1 className={styles["title"]}>{blok.title}</h1>
+      <div className={styles["container"]}
         {...storyblokEditable(blok)}
       >
         { articles[0] && articles.map((article) => (
