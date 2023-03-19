@@ -1,3 +1,36 @@
+/* Normal style */
+@font-face {
+	font-family: 'Chakra Petch';
+	src: url('../fonts/ChakraPetch-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
+  
+  /* Italic style */
+  @font-face {
+	font-family: 'Chakra Petch';
+	src: url('../fonts/ChakraPetch-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+  }
+  
+  /* Bold style */
+  @font-face {
+	font-family: 'Chakra Petch';
+	src: url('../fonts/ChakraPetch-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+  }
+  
+  /* Bold Italic style */
+  @font-face {
+	font-family: 'Chakra Petch';
+	src: url('../fonts/ChakraPetch-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+  }
+
+
 html {
 	padding: 0;
 	margin: 0;
