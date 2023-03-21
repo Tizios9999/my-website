@@ -30,6 +30,27 @@
 	font-style: italic;
   }
 
+// Swiper style override
+
+:root {
+	--swiper-theme-color: white !important;
+}
+
+.swiper-button-next {
+	text-shadow: 0 0 4px white;
+}
+
+.swiper-button-prev {
+	text-shadow: 0 0 4px white;
+}
+
+.swiper-button-disabled {
+	text-shadow: none;
+}
+
+.swiper-slide {
+	display: flex !important;
+}
 
 html {
 	padding: 0;
