@@ -34,14 +34,25 @@
 
 :root {
 	--swiper-theme-color: white !important;
+	--swiper-navigation-sides-offset: calc(10px);
+
+	@media screen and (min-width: 1530px) {
+		--swiper-navigation-sides-offset: calc(10px + 20vw);
+	  }
+
+	@media screen and (min-width: 1200px) and (max-width: 1529px) {
+		--swiper-navigation-sides-offset: calc(10px + 10vw);
+	  }
 }
 
 .swiper-button-next {
 	text-shadow: 0 0 4px white;
+
 }
 
 .swiper-button-prev {
 	text-shadow: 0 0 4px white;
+
 }
 
 .swiper-button-disabled {
