@@ -1,4 +1,5 @@
-$turn-on-speed: 2s;
+$turn-on-speed: 0.1s;
+$turn-on-delay: 0.5s;
 
 $neon-rgb1: 1;
 $neon-rgb2: 33;
@@ -17,14 +18,14 @@ $neon-size: 16px;
 .section-container {
 
   padding: 20px;
-
+  height: 100vh;
 }
 
 
 .neon-window {
   border: $neon-size solid $neon-color-off;
   border-radius: $neon-size/2;
-  height: 600px;
+  height: 100%;
   color: $text-off;
   
 
@@ -32,7 +33,7 @@ $neon-size: 16px;
       display: flex;
       height: 100%;
       text-align: center;
-      justify-content: space-around;
+      justify-content: center;
       flex-flow: column nowrap;
 
       .intro {
@@ -41,6 +42,7 @@ $neon-size: 16px;
           text-shadow: 0 0 2px;
           animation: text_lit $turn-on-speed ease-out;
           animation-fill-mode: forwards;
+          animation-delay: $turn-on-delay;
       }
 
       .my-name {
@@ -49,6 +51,7 @@ $neon-size: 16px;
           animation: text_lit $turn-on-speed ease-out, 
                      text_lit_brilliant 4s ease-out;
           animation-fill-mode: forwards;
+          animation-delay: $turn-on-delay;
       }
 
       .my-title {
@@ -57,6 +60,7 @@ $neon-size: 16px;
           text-shadow: 0 0 2px;
           animation: text_lit $turn-on-speed ease-out;
           animation-fill-mode: forwards;
+          animation-delay: $turn-on-delay;
       }
 
   }
@@ -65,6 +69,7 @@ $neon-size: 16px;
 .neon-border-lit {
   animation: neon_lit $turn-on-speed ease-out;
   animation-fill-mode: forwards;
+  animation-delay: $turn-on-delay;
 }
 
 
