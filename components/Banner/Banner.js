@@ -8,16 +8,6 @@ const Banner = ({ blok }) => {
   const borderClasses = classNames(styles["neon-window"], styles["neon-border-lit"]);
   const borderRef = useRef();
 
-  // const handleClick = () => {
-  //   borderRef.current.classList.remove('.neon-border-lit');
-
-  //   console.log("AAAAAAA!")
-
-  //   window.getComputedStyle(borderRef.current).getPropertyValue('border');
-
-  //   borderRef.current.classList.add('.neon-border-off');
-  // }
-
   return ( 
         <div className={styles["section-container"]} >
         <section ref={borderRef} className={borderClasses}>
