@@ -21,6 +21,7 @@ const Navbar = () =>
 
   return (
   <>
+  <nav className={styles["nav-top"]}></nav>
   <LedPanel onclick={toggleMenu} />
   {menuVisibility && <nav className={styles["navbar"]}>
      <div className={styles["nav-menu"]}>
