@@ -1,0 +1,36 @@
+$neon-size: 16px;
+$turn-on-speed: 1s;
+
+$neon-rgb1: 33;
+$neon-rgb2: 209;
+$neon-rgb3: 124;
+$neon-color-lit: rgb($neon-rgb1, $neon-rgb2, $neon-rgb3);
+$neon-color-off: rgb($neon-rgb1*0.5, $neon-rgb2*0.5, $neon-rgb3*0.5);
+
+$text-rgb1: 255;
+$text-rgb2: 255;
+$text-rgb3: 255;
+$text-lit: rgb($text-rgb1, $text-rgb2, $text-rgb3);
+$text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
+
+.footer-container {
+    display: block;
+    padding: 20px;
+}
+
+.neon-window {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 100%;
+        margin-top: 120px;
+        height: calc(100vh - 70px - $neon-size);
+        border: $neon-size solid $neon-color-lit;
+        border-radius: $neon-size/2;
+        padding: 50px;
+        color: $text-lit;
+        box-shadow: 0 0 25px $neon-color-lit,
+        inset 0 0 25px $neon-color-lit,
+        0 0 2px white,
+        inset 0 0 2px white;
+      }

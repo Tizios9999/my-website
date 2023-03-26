@@ -26,7 +26,8 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
 }
 
 .neon-border {
-  height: 95vh;
+  margin-top: 40px;
+  height: calc(100vh - 70px);
   border: $neon-size solid $neon-color-off;
   border-radius: $neon-size/2;
   padding: 50px;
