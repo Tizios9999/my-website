@@ -1,3 +1,5 @@
+@import '../../styles/neon-default.scss';
+
 $neon-size: 16px;
 $turn-on-speed: 1s;
 
@@ -12,6 +14,7 @@ $text-rgb2: 255;
 $text-rgb3: 255;
 $text-lit: rgb($text-rgb1, $text-rgb2, $text-rgb3);
 $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
+
 
 .footer-container {
     display: block;
