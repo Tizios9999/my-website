@@ -1,7 +1,6 @@
 .section-container {
     display: block;
     margin-top: 40px;
-    margin-bottom: 40px;
     min-height: calc(100vh - 70px);
 }
 
@@ -69,15 +68,20 @@
         margin-bottom: 5px;
       }
       
-      .card ul {
-        list-style: none;
+      .card .badges-list {
+        color: #050024;
+        font-size: 14px;
         margin: 0;
         padding: 0;
         margin-bottom: 20px;
-      }
-      
-      .card ul li {
-        font-size: 14px;
+        display: flex;
+
+        .badge {
+            background-color: white;
+            margin: 2px;
+            padding: 3px;
+            border-radius: 5px;
+        }
       }
       
       .card p {
@@ -96,10 +100,6 @@
                 inset 0 0 6px white;
         text-decoration: none;
         text-shadow: 0 0 6px white;
-      }
-      
-      .card .btn:hover {
-        background-color: #0062cc;
       }
       
 }

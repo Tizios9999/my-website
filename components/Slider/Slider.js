@@ -37,6 +37,18 @@ const Slider = ({ blok }) => {
     }    
   }
 
+  function splitIntoBadges(elementsList, bgColor) {
+    const arr = elementsList.split(", ");
+
+    const badgesList = arr.map((element) => {
+      return <div style={{backgroundColor: bgColor}} className={styles["badge"]}>{element}</div>
+    });
+
+    return <div className={styles["badges-list"]}>
+      {badgesList}
+    </div>
+    }
+
   return  <section className={styles["section-container"]}>
           <div className={styles["blok-container"]} {...storyblokEditable(blok)}>
           <h2 className={styles["section-title"]}>Most relevant Projects</h2>
@@ -59,9 +71,7 @@ const Slider = ({ blok }) => {
                       <img src={card.image.filename} alt="Project Logo" style={applyDropShadowStyle(card.themeColor)}></img>
                       <h2>{card.title}</h2>
                       <h4>Technologies Used:</h4>
-                      <ul>
-                        <li>{card.technologies}</li>
-                      </ul>
+                      {splitIntoBadges(card.technologies, card.themeColor)}
                       <p>{card.description}</p>
                       <a href="project-page.html" className={styles["btn"]} style={applyButtonStyle(card.themeColor)} >View Project</a>
                     </div>
