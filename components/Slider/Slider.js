@@ -8,11 +8,39 @@ import { Navigation } from "swiper";
  
 const Slider = ({ blok }) => {
 
+  function applyBorderStyle(color) {
+    return {
+      border: `6px solid ${color}`,
+      boxShadow: `0 0 12px ${color}, 
+      inset 0 0 12px ${color},
+      0 0 2px white,
+      inset 0 0 2px white;`,
+      borderRadius: "2%"
+    }
+  }
+
+  function applyDropShadowStyle(color) {
+    return {
+      filter: `drop-shadow(0 0 3px ${color})`
+    }
+  }
+
+  function applyButtonStyle(color) {
+    return {
+      color: `${color}`,
+      border: `2px solid ${color}`,
+      boxShadow: `0 0 12px ${color}, 
+      inset 0 0 12px ${color},
+      0 0 2px white,
+      inset 0 0 2px white;`,
+      textShadow: `0 0 0 6px ${color}`
+    }    
+  }
+
   return  <section className={styles["section-container"]}>
           <div className={styles["blok-container"]} {...storyblokEditable(blok)}>
-          <h2>Most relevant Projects</h2>
+          <h2 className={styles["section-title"]}>Most relevant Projects</h2>
           <div className={styles["swiper-container"]}>
-            
           <Swiper
             navigation={true}
             modules={[Navigation]}
@@ -26,22 +54,19 @@ const Slider = ({ blok }) => {
             {blok.cards.map((card) => {
               return (
                 <SwiperSlide className={styles["card-container"]}>
-                <div className={styles["custom-slide-container"]}>
-                    <h3 className={styles["project-title"]}>{card.title}</h3>
-                    <div className={styles["img-wrapper"]}>
-                        <img src={card.image.filename}></img>
+                    <div className={styles["custom-slide-container"]} style={applyBorderStyle(card.themeColor)}>
+                    <div className={styles["card"]}>
+                      <img src={card.image.filename} alt="Project Logo" style={applyDropShadowStyle(card.themeColor)}></img>
+                      <h2>{card.title}</h2>
+                      <h4>Technologies Used:</h4>
+                      <ul>
+                        <li>{card.technologies}</li>
+                      </ul>
+                      <p>{card.description}</p>
+                      <a href="project-page.html" className={styles["btn"]} style={applyButtonStyle(card.themeColor)} >View Project</a>
                     </div>
-                    <div className={styles["desc"]}><p>{card.description}</p></div>
-                    <div className={styles["technologies-desc"]}><p>TECHNOLOGIES HERE</p></div>
-                    <div className={styles["project-buttons-wrapper"]}>
-                      {card.liveLink.url && <ProjectButton link={card.liveLink.url} msg="See it Live" />}
-                      {card.githubLink.url && <ProjectButton link={card.githubLink.url} msg="Check the code on Github" />}
-                      {card.blogLink.url && <ProjectButton link={card.blogLink.url} msg="Read about it on my blog" />}
-                      {/* <a href={card.live_link.url}><button>See it Live</button></a>
-                      <a href="http://www.example.com"><button>Check the code on Github</button></a>
-                      <a href="http://www.example.com"><button>Read about it on my blog</button></a> */}
-                    </div>
-                </div>
+
+                  </div>
                 </SwiperSlide>
 
             )

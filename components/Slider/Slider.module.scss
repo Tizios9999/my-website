@@ -2,29 +2,24 @@
     display: block;
     margin-top: 40px;
     margin-bottom: 40px;
+    min-height: calc(100vh - 70px);
 }
 
 .blok-container {
     text-align: center;
-    height: 95vh;
-}
-
-.swiper-container {
-    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-flow: column;
+    height: 100%;
 }
 
 .card-container {
-    height: 80%;
-    width: 850px;
     display: flex;
     justify-content: center;
 }
 
 .custom-slide-container {
     display: flex;
-    padding: 20px 50px;
+    padding: 10px;
     flex-direction: column;
     align-items: center;
     min-height: 100%;
@@ -32,50 +27,80 @@
 
     // Borders and animation to be done
 
-    border: 4px solid yellow;
+    border: 6px solid white;
     border-radius: 2%;
-    box-shadow: 0 0 12px yellow,
-        inset 0 0 12px yellow,
-        0 0 2px white,
-        inset 0 0 2px white;
+    // box-shadow: 0 0 12px white,
+    //     inset 0 0 12px white,
+    //     0 0 2px white,
+    //     inset 0 0 2px white;
 
     .project-title {
         text-shadow: 0 0 2px white;
     }
 }
 
-.img-wrapper {
-
-    max-height: 400px;
-    
-    img {
-    
-        max-width:100%;
-        object-fit: cover;
-    }
-}
-
-.desc {
-    min-height: 100px;
-    display: block;
-}
-
-.project-buttons-wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin-bottom: 10px;
-    button {
-        cursor: pointer;
-        min-height: 60px;
-        border: 2px solid white;
+.card-container {
+    .card {
+        min-width: 300px;
+        max-width: 450px;
+        height: 450px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      
+      .card img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+        filter: drop-shadow(0 0 3px white);
+      }
+      
+      .card h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      
+      .card h4 {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      
+      .card ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+      }
+      
+      .card ul li {
+        font-size: 14px;
+      }
+      
+      .card p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        min-height: 80px;
+      }
+      
+      .card .btn {
         background-color: transparent;
         color: white;
-        font-weight: bold;
-        width: 150px;
-        margin: 20px;
-        padding: 12px;
-        box-shadow: 0 0 2px white,
-              inset 0 0 2px white;
-    }
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 2px solid white;
+        box-shadow: 0 0 6px white,
+                inset 0 0 6px white;
+        text-decoration: none;
+        text-shadow: 0 0 6px white;
+      }
+      
+      .card .btn:hover {
+        background-color: #0062cc;
+      }
+      
 }
+
