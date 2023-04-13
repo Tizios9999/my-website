@@ -30,7 +30,7 @@ const AllArticles = ({ blok }) => {
         {...storyblokEditable(blok)}
       >
         { articles[0] && articles.map((article) => (
-          <ArticleTeaser article={article.content} key={article.uuid} />
+          <ArticleTeaser article={article.content} tags={article.tag_list} key={article.uuid} />
         ))}
       </div>
     </>

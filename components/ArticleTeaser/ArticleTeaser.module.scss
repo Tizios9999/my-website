@@ -6,3 +6,23 @@
     padding:20px;
     text-align:center;
   }
+
+  .icon-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .tag-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    color: #050024;
+  }
+
+  .tag {
+    background-color: white;
+    margin: 2px;
+    padding: 3px;
+    border-radius: 5px;
+  }

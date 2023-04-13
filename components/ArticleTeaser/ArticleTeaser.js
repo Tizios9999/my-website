@@ -2,10 +2,11 @@ import Link from "next/link";
 import { render } from 'storyblok-rich-text-react-renderer';
 import styles from './ArticleTeaser.module.scss';
  
-const ArticleTeaser = ({ article }) => {
+const ArticleTeaser = ({ article, tags }) => {
 return (
   <div>
   <div className={styles["card"]}>
+    <img className={styles["icon-img"]} src={article.image.filename}></img>
     <h1>
       {article.title}
     </h1>
@@ -20,6 +21,13 @@ return (
           Read More »
         </a>
       </Link>
+      <div className={styles["tag-wrapper"]}>
+      {tags.map((tag) => {
+        return (
+          <div className={styles["tag"]}>{tag}</div>
+        )
+      })}
+      </div>
     </div>
   </div>
 </div>
