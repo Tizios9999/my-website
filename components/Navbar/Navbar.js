@@ -21,16 +21,19 @@ const Navbar = () =>
 
   return (
   <>
-  <nav className={styles["nav-top"]}></nav>
+  <nav className={styles["nav-top"]}>
+    <div className={styles["screen-over-nav"]}>
+      <p>Davide Santonocito</p>
+    </div>
+  </nav>
   <LedPanel onclick={toggleMenu} />
   {menuVisibility && <nav className={styles["navbar"]}>
      <div className={styles["nav-menu"]}>
         <ul>
             <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Skills</li>
-            <li>Curriculum</li>
+            <li>About Me</li>
+            <li>My Projects</li>
+            <li><a href="./blog">Blog</a></li>
             <li>Contact Me</li>
         </ul>
     </div>

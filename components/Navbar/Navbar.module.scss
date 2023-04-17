@@ -30,3 +30,29 @@
         line-height:70px;
     }
 }
+
+.screen-over-nav {
+    padding: 20px;
+    padding-top: 20px;
+    text-align: center;
+    color: #f5c577;
+    
+    height: 100%;
+    // border: 1px solid red;
+
+    height: 60px;
+    overflow: hidden;
+
+    p {
+        margin-top: 0;
+        font-size: 24px;
+        text-shadow: 0 0 2px #f5c577,
+        0 0 1px white;
+
+        @media (max-width: 600px) {
+            
+            font-size: 20px;
+
+            }
+    }
+}
