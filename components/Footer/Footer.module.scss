@@ -19,10 +19,13 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
 .footer-container {
     display: block;
     padding: 20px;
-}
+    padding-top: calc(var(--navbar-height) + 20px);
+    height: 100vh;
+  }
 
 .neon-window {
         display: flex;
+        text-align: center;
         flex-flow: column nowrap;
         align-items: center;
         width: 100%;

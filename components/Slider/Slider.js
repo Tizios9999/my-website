@@ -1,6 +1,6 @@
 import { storyblokEditable } from "@storyblok/react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import ProjectButton from './ProjectButton/ProjectButton';
+import LinkButton from './LinkButton/LinkButton';
 import styles from './Slider.module.scss';
 import 'swiper/css';
 import "swiper/css/navigation";

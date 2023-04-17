@@ -13,26 +13,50 @@ $text-lit: rgb($text-rgb1, $text-rgb2, $text-rgb3);
 $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
 
 .container {
-    min-width: 80%;
     margin: 0 auto;
     text-align: center;
     overflow-y: hidden;
+    min-width: 98%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-top: calc(var(--navbar-height) + 20px);
+    height: calc(100vh - var(--navbar-height) - 20px);
     
     h1, h2, p {
         animation: text_lit $turn-on-speed ease-out;
         animation-fill-mode: forwards;
     }
+
+    p {
+      max-width: 500px;
+    }
 }
 
 .neon-border {
-  margin-top: 40px;
-  height: calc(100vh - 70px);
   border: $neon-size solid $neon-color-off;
   border-radius: $neon-size/2;
   padding: 20px;
   color: $text-off;
   animation: neon_lit $turn-on-speed ease-out;
   animation-fill-mode: forwards;
+
+  .btn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid red;
+    box-shadow: 0 0 6px red,
+            inset 0 0 6px red,
+            0 0 2px white,
+            inset 0 0 2px white;
+    text-decoration: none;
+    text-shadow: 0 0 6px red,
+    0 0 1px white;
+  }
 }
 
 
