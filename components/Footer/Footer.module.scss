@@ -1,7 +1,7 @@
 @import '../../styles/neon-default.scss';
 
-$neon-size: 16px;
-$turn-on-speed: 1s;
+// $neon-size: 16px;
+// $turn-on-speed: 1s;
 
 $neon-rgb1: 33;
 $neon-rgb2: 209;
@@ -26,7 +26,7 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
         flex-flow: column nowrap;
         align-items: center;
         width: 100%;
-        margin-top: 120px;
+        padding-top: 90px;
         height: calc(100vh - 70px - $neon-size);
         border: $neon-size solid $neon-color-lit;
         border-radius: $neon-size/2;

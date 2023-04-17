@@ -30,11 +30,13 @@
 	font-style: italic;
   }
 
-// Swiper style override
+// CSS Variables and Swiper style override
 
 :root {
 	--swiper-theme-color: white !important;
 	--swiper-navigation-sides-offset: calc(10px);
+	
+	
 
 	@media screen and (min-width: 1530px) {
 		--swiper-navigation-sides-offset: calc(10px + 20vw);
@@ -43,6 +45,25 @@
 	@media screen and (min-width: 1200px) and (max-width: 1529px) {
 		--swiper-navigation-sides-offset: calc(10px + 10vw);
 	  }
+
+
+	@media only screen and (min-width: 601px) {
+
+			--var-neon-size: 16px;
+
+}
+
+	@media only screen and (min-width: 480px) and (max-width: 600px) {
+
+			--var-neon-size: 12px;
+
+  }
+
+  	@media only screen and (max-width: 479px) {
+
+			--var-neon-size: 8px;
+
+  }
 }
 
 .swiper-button-next {
