@@ -8,13 +8,13 @@ const Footer = () => {
                 <h2>How to reach me</h2>
                 <p>Don't hesitate to contact me for any idea you might have in mind!</p>
                 <p>You can find me on my LinkedIn here below</p>
-                <div>
-                    IMAGE HERE
-                </div>
+                <a href="https://www.linkedin.com/in/davide-santonocito-36ab84170/" target="_blank">
+                <img className={styles["icon"]} src="./linkedin-icon.svg" alt="Project Logo"></img>
+                </a>
                 <p>...and here below is my Github profile.</p>
-                <div>
-                    IMAGE HERE
-                </div>
+                <a href="https://github.com/Tizios9999" target="_blank">
+                <img className={styles["icon"]} src="./github-icon.svg" alt="Project Logo"></img>
+                </a>
                 <p>See you soon! 😃</p>
             </div>
           </footer>

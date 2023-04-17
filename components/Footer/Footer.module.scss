@@ -40,3 +40,13 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
         0 0 2px white,
         inset 0 0 2px white;
       }
+
+.icon {
+  height: 70px;
+  width: 70px;
+  filter: drop-shadow(0 0 3px rgb($neon-rgb1, $neon-rgb2, $neon-rgb3))
+}
+
+.empty-space {
+  height: 20px;
+}
