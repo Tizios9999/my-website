@@ -25,7 +25,9 @@ const AllArticles = ({ blok }) => {
   return (
     //All articles in blog home page
     <>
-      <h1 className={styles["title"]}>{blok.title}</h1>
+      <div className={styles["title"]}>
+      <h1>{blok.title}</h1>
+      </div>
       <div className={styles["container"]}
         {...storyblokEditable(blok)}
       >

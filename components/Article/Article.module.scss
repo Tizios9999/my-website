@@ -2,8 +2,8 @@ $neon-size: 16px;
 $turn-on-speed: 1s;
 
 $neon-rgb1: 255;
-$neon-rgb2: 39;
-$neon-rgb3: 0;
+$neon-rgb2: 255;
+$neon-rgb3: 255;
 $neon-color-lit: rgb($neon-rgb1, $neon-rgb2, $neon-rgb3);
 $neon-color-off: rgb($neon-rgb1*0.5, $neon-rgb2*0.5, $neon-rgb3*0.5);
 
@@ -14,9 +14,9 @@ $text-lit: rgb($text-rgb1, $text-rgb2, $text-rgb3);
 $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
 
 .container {
-    min-width: 70%;
-    max-width: 80%;
     margin: 0 auto;
+    padding: 20px;
+    padding-top: calc(var(--navbar-height) + 20px);
     text-align: center;
     
     h1, h2, p {
@@ -51,9 +51,7 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
     }
     to {
         border: $neon-size solid $neon-color-lit;
-        box-shadow: 0 0 25px $neon-color-lit,
-        inset 0 0 25px $neon-color-lit,
-        0 0 2px white,
+        box-shadow: 0 0 2px white,
         inset 0 0 2px white;
         
     }
