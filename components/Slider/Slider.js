@@ -1,5 +1,8 @@
 import { storyblokEditable } from "@storyblok/react";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import applyBorderStyle from '../../assets/js/applyBorderStyle'
+import applyDropShadowStyle from '../../assets/js/applyDropShadowStyle'
+import applyButtonStyle from '../../assets/js/applyButtonStyle'
 import LinkButton from './LinkButton/LinkButton';
 import styles from './Slider.module.scss';
 import 'swiper/css';
@@ -8,34 +11,6 @@ import { Navigation } from "swiper";
  
 const Slider = ({ blok }) => {
 
-  function applyBorderStyle(color) {
-    return {
-      border: `6px solid ${color}`,
-      boxShadow: `0 0 12px ${color}, 
-      inset 0 0 12px ${color},
-      0 0 2px white,
-      inset 0 0 2px white;`,
-      borderRadius: "2%"
-    }
-  }
-
-  function applyDropShadowStyle(color) {
-    return {
-      filter: `drop-shadow(0 0 3px ${color})`
-    }
-  }
-
-  function applyButtonStyle(color) {
-    return {
-      color: `${color}`,
-      border: `2px solid ${color}`,
-      boxShadow: `0 0 12px ${color}, 
-      inset 0 0 12px ${color},
-      0 0 2px white,
-      inset 0 0 2px white;`,
-      textShadow: `0 0 0 6px ${color}`
-    }    
-  }
 
   function splitIntoBadges(elementsList, bgColor) {
     const arr = elementsList.split(", ");
