@@ -13,9 +13,9 @@ const Article = ({ blok }) => {
           <h1>
             {blok.title}
           </h1>
-          <h1>
+          <h2>
             {blok.subtitle}
-          </h1>
+          </h2>
           <div>{render(blok.content)}</div>
         </div>
       </div>

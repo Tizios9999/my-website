@@ -22,6 +22,18 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
         animation: text_lit $turn-on-speed ease-out;
         animation-fill-mode: forwards;
     }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 20px;
+    }
 }
 
 .neon-border {
