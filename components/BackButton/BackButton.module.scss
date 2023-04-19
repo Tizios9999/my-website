@@ -1,0 +1,13 @@
+.back-button {
+
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+
+    img {
+        height: 50px;
+        width: 50px;
+        filter: drop-shadow(0 0 3px yellow);
+    }
+}
