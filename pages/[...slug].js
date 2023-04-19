@@ -6,14 +6,19 @@ import {
   getStoryblokApi,
   StoryblokComponent,
 } from "@storyblok/react";
- 
+
+function capitalizeString(str) {
+
+  return str[0].toUpperCase() + str.slice(1);
+}
+
 export default function Page({ story }) {
   story = useStoryblokState(story);
  
   return (
     <div>
       <Head>
-        <title>{story ? story.name : "Davide Santonocito"}</title>
+        <title>{story ? capitalizeString(story.name) : "Davide Santonocito"}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
