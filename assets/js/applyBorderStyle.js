@@ -1,10 +1,9 @@
-export default function applyBorderStyle(color) {
+export default function applyBorderStyle(color, size = 6, radiance = 2) {
     return {
-      border: `6px solid ${color}`,
-      boxShadow: `0 0 12px ${color}, 
-      inset 0 0 12px ${color},
-      0 0 2px white,
-      inset 0 0 2px white;`,
-      borderRadius: "2%"
+      border: `${size}px solid ${color}`,
+      boxShadow: `0 0 ${size*2}px ${color}, 
+      inset 0 0 ${size*2}px ${color},
+      0 0 ${radiance}px white,
+      inset 0 0 ${radiance}px white;`
     }
   }

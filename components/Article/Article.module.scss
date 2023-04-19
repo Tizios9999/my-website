@@ -37,12 +37,12 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
 }
 
 .neon-border {
-  border: $neon-size solid $neon-color-off;
+  // border: $neon-size solid $neon-color-off;
   border-radius: $neon-size/2;
   padding: 20px;
   color: $text-off;
-  animation: neon_lit $turn-on-speed ease-out;
-  animation-fill-mode: forwards;
+  // animation: neon_lit $turn-on-speed ease-out;
+  // animation-fill-mode: forwards;
 
   .article {
     max-width: 800px;
@@ -50,6 +50,10 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
 
     img {
       max-width: 95%;
+    }
+
+    a {
+      color: yellow;
     }
   }
 
@@ -65,15 +69,15 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
     }
   }
 
-@keyframes neon_lit {
-    from {
-        border: $neon-size solid $neon-color-off;
-        text-shadow: 0 0 0px;
-    }
-    to {
-        border: $neon-size solid $neon-color-lit;
-        box-shadow: 0 0 2px white,
-        inset 0 0 2px white;
+// @keyframes neon_lit {
+//     from {
+//         border: $neon-size solid $neon-color-off;
+//         text-shadow: 0 0 0px;
+//     }
+//     to {
+//         border: $neon-size solid $neon-color-lit;
+//         box-shadow: 0 0 2px white,
+//         inset 0 0 2px white;
         
-    }
-  }
+//     }
+//   }
