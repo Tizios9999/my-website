@@ -48,7 +48,7 @@ const Slider = ({ blok }) => {
                       <h4>Technologies Used:</h4>
                       {splitIntoBadges(card.technologies, card.themeColor)}
                       <p>{card.description}</p>
-                      <a href="project-page.html" className={styles["btn"]} style={applyButtonStyle(card.themeColor)} >View Project</a>
+                      <a href={card.blogLink.cached_url} className={styles["btn"]} style={applyButtonStyle(card.themeColor)} >View Project</a>
                     </div>
 
                   </div>

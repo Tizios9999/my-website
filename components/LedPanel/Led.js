@@ -1,8 +1,8 @@
 import styles from './Led.module.scss';
 import classNames from 'classnames';
 
-function Led(props) {
-    const ledClasses = classNames(styles["led"], {[styles["on"]]: props.highlighted});
+function Led({state}) {
+    const ledClasses = classNames(styles["led"], {[styles["on"]]: state});
 
     return ( 
         

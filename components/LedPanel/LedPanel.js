@@ -1,42 +1,44 @@
 import Led from './Led';
+import React, { useState } from 'react';
 import styles from './LedPanel.module.scss';
+import generatePanelStream from '../../assets/js/generatePanelStream';
 
 function LedPanel(props) {
 
     const ledLights = [5, 5, 5, 5, 5];
-
     const ledLights2 = [1,    3,    1, 
                         1, 1, 1, 1, 3,
                                  1, 3,
                            1, 1, 1, 1,
                         1,    3,    1];
 
-    function generatePanelStream(panelMap) {
-        let ledArray = [];
-        let switchedOn = true;
+    const firstLed = generatePanelStream(ledLights);
+    const secondLed = generatePanelStream(ledLights2);
 
-        panelMap.forEach(element => {
-            
-            for (let i = 0; i < element; i++) {
-                ledArray.push(switchedOn);
-            }
-            switchedOn = !switchedOn;
+    const [ledStates, setLedStates] = useState(firstLed);
 
-        })
+    const handleLedClick = (index) => {
 
-        return ledArray;
+        if (ledStates.toString() == firstLed.toString() ) {
+
+            setLedStates(secondLed);
+        
+        } else {
+
+            setLedStates(firstLed);
+        }
+
+        console.log(ledStates);
     }
-    
-    const panelArray = generatePanelStream(ledLights).map((card) => {
-
-      return (
-            <Led highlighted={card}/>
-            )  
-    })
 
     return ( 
-        <div onClick={props.onclick} className={styles["panel-container"]}>
-            <div className={styles["led-grid"]}>{panelArray}</div>
+        <div onClick={() => {
+            props.onclick();
+            handleLedClick();
+        }} className={styles["panel-container"]}>
+            <div className={styles["led-grid"]}>{ledStates.map((state, index) => (
+        <Led key={index} state={state}/>
+      ))}</div>
         </div>
         )
 }
