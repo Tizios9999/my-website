@@ -28,7 +28,6 @@ function LedPanel(props) {
             setLedStates(firstLed);
         }
 
-        console.log(ledStates);
     }
 
     return ( 
