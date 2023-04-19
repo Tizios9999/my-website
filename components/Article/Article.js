@@ -6,9 +6,11 @@ const Article = ({ blok }) => {
 
   return (
     <section className={styles["container"]}>
+      
       <div className={styles["neon-border"]} style={applyBorderStyle(blok.theme, 12, 2)}>
        
         <div className={styles["article"]}>
+        <img className={styles["icon-img"]} src={blok.image.filename}></img>
           <h1>
             {blok.title}
           </h1>

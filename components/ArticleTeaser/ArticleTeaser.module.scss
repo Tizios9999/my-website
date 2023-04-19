@@ -1,10 +1,10 @@
 .card {
     width:300px;
     height:300px;
-    border:1px solid white;
     margin:20px;
     padding:20px;
     text-align:center;
+    border-radius: 5px;
   }
 
   .icon-img {
@@ -21,8 +21,8 @@
   }
 
   .tag {
-    background-color: white;
     margin: 2px;
+    font-weight: bold;
     padding: 3px;
     border-radius: 5px;
   }
