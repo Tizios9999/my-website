@@ -26,6 +26,7 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
 .neon-window {
         display: flex;
         text-align: center;
+        justify-content: center;
         flex-flow: column nowrap;
         align-items: center;
         width: 100%;

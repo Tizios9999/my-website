@@ -31,6 +31,20 @@
     }
 }
 
+.back-button {
+
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+
+    img {
+        height: 50px;
+        width: 50px;
+        filter: drop-shadow(0 0 3px yellow);
+    }
+}
+
 .screen-over-nav {
     padding: 20px;
     padding-top: 20px;
@@ -38,8 +52,6 @@
     color: #f5c577;
     
     height: 100%;
-    // border: 1px solid red;
-
     height: 60px;
     overflow: hidden;
 

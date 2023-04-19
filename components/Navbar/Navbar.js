@@ -1,6 +1,8 @@
 import styles from "./Navbar.module.scss"
 import  {useState, useEffect} from "react"
 import LedPanel from "../LedPanel/LedPanel"
+import { useRouter } from 'next/router';
+
 
 const Navbar = () =>
 {
@@ -9,6 +11,13 @@ const Navbar = () =>
 
   function toggleMenu(){
     setMenuVisibility(!menuVisibility)
+  }
+
+  const router = useRouter();
+
+// function to go back
+  function handleGoBack() {
+    router.back();
   }
 
   useEffect(() => {
@@ -22,6 +31,9 @@ const Navbar = () =>
   return (
   <>
   <nav className={styles["nav-top"]}>
+    <div className={styles["back-button"]} onClick={handleGoBack}>
+      <img src="./back-arrow.svg" alt="back"/>
+    </div>
     <div className={styles["screen-over-nav"]}>
       <p>Davide Santonocito</p>
     </div>
