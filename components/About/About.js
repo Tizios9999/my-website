@@ -7,7 +7,7 @@ const About = ({ blok }) => {
             <h1>About me</h1>
             <h2>{blok.title}</h2>
             <p>{blok.description}</p>
-            <a><button className={styles["btn"]}>More about me</button></a>
+            <a href="./blog/about-me"><button className={styles["btn"]}>More about me</button></a>
           </div>
         </div>
 };
