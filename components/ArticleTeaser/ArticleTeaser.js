@@ -2,6 +2,7 @@ import Link from "next/link";
 import { render } from 'storyblok-rich-text-react-renderer';
 import styles from './ArticleTeaser.module.scss';
 import applyBorderStyle from "../../assets/js/applyBorderStyle";
+import applyColorStyle from "../../assets/js/applyColorStyle";
  
 const ArticleTeaser = ({ article, tags }) => {
 return (
@@ -18,6 +19,7 @@ return (
       <Link href={`/blog/${article.slug}`}>
         <a
           title="read more"
+          style={applyColorStyle(article.theme)}
         >
           Read More »
         </a>

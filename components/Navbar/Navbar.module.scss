@@ -43,11 +43,12 @@
     height: 60px;
     overflow: hidden;
 
-    p {
+    .my-name {
         margin-top: 0;
         font-size: 24px;
         text-shadow: 0 0 2px #f5c577,
         0 0 1px white;
+        font-weight:400;
 
         @media (max-width: 600px) {
             

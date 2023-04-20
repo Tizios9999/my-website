@@ -27,7 +27,7 @@ const Navbar = () =>
   <nav className={styles["nav-top"]}>
     <BackButton />
     <div className={styles["screen-over-nav"]}>
-      <p>Davide Santonocito</p>
+      <h1 className={styles["my-name"]}>Davide Santonocito</h1>
     </div>
   </nav>
   <LedPanel onclick={toggleMenu} />
