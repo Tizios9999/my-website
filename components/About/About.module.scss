@@ -45,6 +45,7 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
 
   .btn {
     background-color: transparent;
+    cursor: pointer;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;

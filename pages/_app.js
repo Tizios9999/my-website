@@ -1,5 +1,6 @@
 import '../styles/globals.scss'
 import { storyblokInit, apiPlugin } from "@storyblok/react";
+import { SiteContextProvider } from '../contexts/SiteContext';
 import Feature from "../components/Feature";
 import Grid from "../components/Grid";
 import Page from "../components/Page";
@@ -28,7 +29,11 @@ const components = {
  
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <SiteContextProvider> 
+      <Component {...pageProps} />
+    </SiteContextProvider>
+  )
 }
 
 storyblokInit({
