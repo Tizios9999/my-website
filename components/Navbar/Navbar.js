@@ -2,6 +2,7 @@ import styles from "./Navbar.module.scss"
 import  {useState, useEffect} from "react"
 import LedPanel from "../LedPanel/LedPanel"
 import BackButton from "../BackButton/BackButton";
+import scrollToSection from "../../assets/js/scrollToSection";
 
 
 const Navbar = () =>
@@ -13,6 +14,10 @@ const Navbar = () =>
     setMenuVisibility(!menuVisibility)
   }
 
+  function scrollFromMenu(elId) {
+    toggleMenu();
+    scrollToSection(elId);
+  }
 
   useEffect(() => {
     if (menuVisibility) {
@@ -34,11 +39,11 @@ const Navbar = () =>
   {menuVisibility && <nav className={styles["navbar"]}>
      <div className={styles["nav-menu"]}>
         <ul>
-            <li>Home</li>
-            <li>About Me</li>
-            <li>My Projects</li>
+            <li onClick={() => scrollFromMenu('home')}>Home</li>
+            <li onClick={() => scrollFromMenu('about')}>About Me</li>
+            <li onClick={() => scrollFromMenu('projects')}>My Projects</li>
             <li><a href="./blog">Blog</a></li>
-            <li>Contact Me</li>
+            <li onClick={() => scrollFromMenu('contact')}>Contact Me</li>
         </ul>
     </div>
   </nav>}

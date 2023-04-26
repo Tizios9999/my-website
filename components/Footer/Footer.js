@@ -4,7 +4,7 @@ const Footer = () => {
   
     return ( 
           <footer className={styles["footer-container"]}>
-            <div className={styles["neon-window"]} id="contact-me">
+            <div className={styles["neon-window"]} id="contact">
                 <h2>How to reach me</h2>
                 <p>Don't hesitate to contact me for any idea you might have in mind!</p>
                 <p>You can find me on my LinkedIn here below</p>

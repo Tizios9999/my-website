@@ -24,7 +24,7 @@ const Slider = ({ blok }) => {
     </div>
     }
 
-  return  <section className={styles["section-container"]}>
+  return  <section className={styles["section-container"]} id={"projects"}>
           <div className={styles["blok-container"]} {...storyblokEditable(blok)}>
           <h2 className={styles["section-title"]}>Most relevant Projects</h2>
           <div className={styles["swiper-container"]}>
