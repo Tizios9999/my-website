@@ -1,8 +1,10 @@
 import styles from "./Navbar.module.scss"
-import  {useState, useEffect} from "react"
+import  { useState, useEffect, useContext } from "react"
+import { SiteContext } from "../../contexts/SiteContext";
 import { useRouter } from 'next/router';
 import LedPanel from "../LedPanel/LedPanel"
 import BackButton from "../BackButton/BackButton";
+import siteSections from "../../assets/data/siteSections";
 import scrollToSection from "../../assets/js/scrollToSection";
 
 
@@ -13,6 +15,8 @@ const Navbar = () =>
   const router = useRouter();
   const { pathname } = router;
 
+  const [ state, dispatch ] = useContext(SiteContext);
+
   //Toggle menu
   const [menuVisibility, setMenuVisibility] = useState(false)
 
@@ -21,15 +25,16 @@ const Navbar = () =>
   }
 
 
-  function moveToSection(elId) {
+  function changeSection(id) {
     
     if (pathname === '/') {
 
-      scrollToSection(elId);
+      dispatch({ type: "CHANGE_CURRENT_SECTION", payload: id})
   
     } else {
       
-      router.push(`/#${elId}`);
+      router.push(`/#${siteSections[id]}`);
+      dispatch({ type: "CHANGE_CURRENT_SECTION", payload: id})
   
       }
 
@@ -55,9 +60,9 @@ const Navbar = () =>
   {menuVisibility && <nav className={styles["navbar"]}>
      <div className={styles["nav-menu"]}>
         <ul onClick={() => toggleMenu()}>
-            <li onClick={() => moveToSection('home')}>Home</li>
-            <li onClick={() => moveToSection('about')}>About Me</li>
-            <li onClick={() => moveToSection('projects')}>My Projects</li>
+            <li onClick={() => changeSection(0)}>Home</li>
+            <li onClick={() => changeSection(1)}>About Me</li>
+            <li onClick={() => changeSection(2)}>My Projects</li>
             <li><a href="./blog">Blog</a></li>
             <li onClick={() => scrollToSection('contact')}>Contact Me</li>
         </ul>
