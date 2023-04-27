@@ -5,9 +5,12 @@ import { reducer } from '../reducers/reducer';
 // Crea il tuo contesto
 const SiteContext = createContext();
 
+
+
 const initialState = 
   {
-    siteSection: 'home'
+    currentSectionIndex: 0,
+    prevTouchY: 0
   }
 
 // Crea un provider che conterrà lo stato globale

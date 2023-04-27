@@ -25,7 +25,7 @@ const Navbar = () =>
     
     if (pathname === '/') {
 
-      scrollFromMenu(elId);
+      scrollToSection(elId);
   
     } else {
       
@@ -33,20 +33,13 @@ const Navbar = () =>
   
       }
 
-
-  }
-
-
-  function scrollFromMenu(elId) {
-    toggleMenu();
-    scrollToSection(elId);
   }
 
   useEffect(() => {
     if (menuVisibility) {
       document.body.style.overflow = "hidden"
     } else {
-      document.body.style.overflow = "auto"
+      // document.body.style.overflow = "auto"
     }
   }, [menuVisibility])
 
@@ -61,12 +54,12 @@ const Navbar = () =>
   <LedPanel onclick={toggleMenu} />
   {menuVisibility && <nav className={styles["navbar"]}>
      <div className={styles["nav-menu"]}>
-        <ul>
+        <ul onClick={() => toggleMenu()}>
             <li onClick={() => moveToSection('home')}>Home</li>
             <li onClick={() => moveToSection('about')}>About Me</li>
             <li onClick={() => moveToSection('projects')}>My Projects</li>
             <li><a href="./blog">Blog</a></li>
-            <li onClick={() => scrollFromMenu('contact')}>Contact Me</li>
+            <li onClick={() => scrollToSection('contact')}>Contact Me</li>
         </ul>
     </div>
   </nav>}
