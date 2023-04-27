@@ -1,7 +1,8 @@
 .section-container {
     display: block;
-    margin-top: 80px;
-    min-height: calc(100vh - 70px);
+    padding-top: calc(var(--navbar-height) + 90px);
+    min-height: calc(100vh - var(--navbar-height) - 20px);
+    margin-bottom: 150px;
 }
 
 .blok-container {
