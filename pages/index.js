@@ -48,7 +48,7 @@ export default function Home({ story }) {
 
       console.log("down");
 
-      if ((state.currentSectionIndex) < siteSections.length ) {
+      if ((state.currentSectionIndex + 1) < siteSections.length ) {
         dispatch({ type: "UPDATE_CURRENT_SECTION", payload: 1 });
       }
 
