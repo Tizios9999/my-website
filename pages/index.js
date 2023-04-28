@@ -29,16 +29,8 @@ export default function Home({ story }) {
 
     const handleScroll = debounce((event) => {
       let deltaY = 0;
-      if (event.type === 'touchmove') {
-      const touch = event.touches[0];
-      deltaY = touch.pageY - state.prevTouchY;
-
-      dispatch({ type: "UPDATE_PREV_TOUCH_Y", payload: touch.pageY})
-
-    } else if (event.type === 'wheel') {
       deltaY = event.deltaY;
-    }
-
+    
     // Determine the direction of the movement
     let direction = deltaY > 0 ? 'down' : 'up';
 
@@ -67,15 +59,68 @@ export default function Home({ story }) {
 
     }, 200)
 
+  let ts;
+
+  const handleSwipe = (event) => {
+    let deltaY = 0;
+
+    if (event.type === 'touchstart') {
+      ts = event.touches[0].clientY;
+    }
+
+    if (event.type === 'touchend') {
+      const te = event.changedTouches[0].clientY;
+
+      // deltaY = te - state.prevTouchY;
+
+      deltaY = ts - te;
+
+      dispatch({ type: "UPDATE_PREV_TOUCH_Y", payload: ts.clientY})
+
+
+      let direction = deltaY > 0 ? 'down' : 'up';
+
+      console.log("start: ", ts, " end: ", te);
+
+      // Handle the event based on the direction of the movement
+      if (direction === 'down') {
+      // Handle downward movement
+
+      console.log("down");
+
+      if ((state.currentSectionIndex + 1) < siteSections.length ) {
+        dispatch({ type: "UPDATE_CURRENT_SECTION", payload: 1 });
+      }
+
+
+
+      } else if (direction === 'up') {
+      // Handle upward movement
+
+      console.log("up");
+
+      if (state.currentSectionIndex > 0 ) {
+        dispatch({ type: "UPDATE_CURRENT_SECTION", payload: -1 });
+      }
+
+      }
+
+    
+
+    }
+  }
+
     scrollToSection(siteSections[state.currentSectionIndex]);
 
-    window.addEventListener('touchmove', handleScroll);
+    window.addEventListener('touchstart', handleSwipe);
+    window.addEventListener('touchend', handleSwipe);
     window.addEventListener('wheel', handleScroll);
     window.addEventListener('keydown', handleScroll);
     
     // return a cleanup function to remove the event listeners
     return () => {
-      window.removeEventListener('touchmove', handleScroll);
+      window.removeEventListener('touchstart', handleSwipe);
+      window.removeEventListener('touchend', handleSwipe);
       window.removeEventListener('wheel', handleScroll);
       window.removeEventListener('keydown', handleScroll);
     };
