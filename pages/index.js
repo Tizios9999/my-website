@@ -59,28 +59,35 @@ export default function Home({ story }) {
 
     }, 200)
 
-  let ts;
+  let tsY;
+  let tsX;
 
   const handleSwipe = (event) => {
-    let deltaY = 0;
+    let deltaY, deltaX = 0;
 
     if (event.type === 'touchstart') {
-      ts = event.touches[0].clientY;
+      tsY = event.touches[0].clientY;
+      tsX = event.touches[0].clientX;
     }
 
     if (event.type === 'touchend') {
-      const te = event.changedTouches[0].clientY;
+      const teY = event.changedTouches[0].clientY;
+      const teX = event.changedTouches[0].clientX;
 
-      // deltaY = te - state.prevTouchY;
+      deltaY = tsY - teY;
+      deltaX = tsX - teX;
 
-      deltaY = ts - te;
+      dispatch({ type: "UPDATE_PREV_TOUCH_Y", payload: tsY.clientY})
 
-      dispatch({ type: "UPDATE_PREV_TOUCH_Y", payload: ts.clientY})
+      let direction;
 
+      if (Math.abs(deltaY) > Math.abs(deltaX)) {
+        direction = deltaY > 0 ? 'down' : 'up';
+      }
 
-      let direction = deltaY > 0 ? 'down' : 'up';
+      
 
-      console.log("start: ", ts, " end: ", te);
+      console.log("start: ", tsY, " end: ", teY);
 
       // Handle the event based on the direction of the movement
       if (direction === 'down') {
