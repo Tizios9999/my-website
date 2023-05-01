@@ -22,6 +22,12 @@ export function reducer(state, action) {
          prevTouchY: action.payload,
        };
 
+     case "TOGGLE_HAMBURGER_STATUS":
+       return {
+        ...state,
+        hamburgerStatus: !state.hamburgerStatus
+       }
+
      default: {
         throw Error('Unknown action: ' + action.type);
      }

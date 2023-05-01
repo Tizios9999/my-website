@@ -25,9 +25,9 @@ return (
         </a>
       </Link>
       <div className={styles["tag-wrapper"]}>
-      {tags.map((tag) => {
+      {tags.map((tag, key) => {
         return (
-          <div className={styles["tag"]} style={{backgroundColor: article.theme}}>{tag}</div>
+          <div key={key} className={styles["tag"]} style={{backgroundColor: article.theme}}>{tag}</div>
         )
       })}
       </div>

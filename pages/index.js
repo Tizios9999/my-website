@@ -1,5 +1,4 @@
 import Head from "next/head"
-import { useRouter } from 'next/router';
 import styles from "../styles/Home.module.scss"
 import Layout from "../components/Layout";
 import { useEffect, useContext } from "react";
@@ -12,9 +11,6 @@ import { getStoryblokApi , StoryblokComponent,  useStoryblokState,} from "@story
  
 export default function Home({ story }) {
   story = useStoryblokState(story);
-
-  const router = useRouter();
-  const { pathname } = router;
 
   const [state, dispatch] = useContext(SiteContext);
 

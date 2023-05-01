@@ -1,32 +1,44 @@
 import Led from './Led';
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+import { SiteContext } from "../../contexts/SiteContext";
 import styles from './LedPanel.module.scss';
 import generatePanelStream from '../../assets/js/generatePanelStream';
+import hamburgerPanel from '../../assets/data/panels/hamburgerPanel';
+import crossPanel from '../../assets/data/panels/crossPanel';
+import crossHamburgerPanel from '../../assets/data/panels/crossHamburgerPanel';
 
 function LedPanel(props) {
 
-    const ledLights = [5, 5, 5, 5, 5];
-    const ledLights2 = [1,    3,    1, 
-                        1, 1, 1, 1, 3,
-                                 1, 3,
-                           1, 1, 1, 1,
-                        1,    3,    1];
+    const [ledStates, setLedStates] = useState(generatePanelStream(hamburgerPanel));
 
-    const firstLed = generatePanelStream(ledLights);
-    const secondLed = generatePanelStream(ledLights2);
+    const [state, dispatch] = useContext(SiteContext);
 
-    const [ledStates, setLedStates] = useState(firstLed);
+    useEffect(() => {
 
-    const handleLedClick = (index) => {
+        if (state.hamburgerStatus) {
 
-        if (ledStates.toString() == firstLed.toString() ) {
-
-            setLedStates(secondLed);
+            setLedStates(generatePanelStream(hamburgerPanel));
         
         } else {
 
-            setLedStates(firstLed);
+            setLedStates(generatePanelStream(crossPanel));
         }
+
+    }, [state.hamburgerStatus])
+
+    const ledTransition = (panel, interval = 100) => {
+
+        setTimeout(() => {
+            dispatch({type: "TOGGLE_HAMBURGER_STATUS"});
+        }, interval)
+
+    }
+
+    const handleLedClick = () => {
+
+        setLedStates(generatePanelStream(crossHamburgerPanel));
+
+        ledTransition();
 
     }
 
@@ -35,8 +47,8 @@ function LedPanel(props) {
             props.onclick();
             handleLedClick();
         }} className={styles["panel-container"]}>
-            <div className={styles["led-grid"]}>{ledStates.map((state, index) => (
-        <Led key={index} state={state}/>
+            <div className={styles["led-grid"]}>{ledStates.map((ledState, index) => (
+        <Led key={index} state={ledState}/>
       ))}</div>
         </div>
         )

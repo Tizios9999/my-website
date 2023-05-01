@@ -38,6 +38,9 @@ const Navbar = () =>
   
       }
 
+    
+      dispatch({ type: "TOGGLE_HAMBURGER_STATUS"})
+
   }
 
   useEffect(() => {
@@ -64,7 +67,7 @@ const Navbar = () =>
             <li onClick={() => changeSection(1)}>About Me</li>
             <li onClick={() => changeSection(2)}>My Projects</li>
             <li><a href="./blog">Blog</a></li>
-            <li onClick={() => scrollToSection('contact')}>Contact Me</li>
+            <li onClick={() => {scrollToSection('contact'), dispatch({ type: "TOGGLE_HAMBURGER_STATUS"})}}>Contact Me</li>
         </ul>
     </div>
   </nav>}

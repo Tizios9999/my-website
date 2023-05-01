@@ -10,7 +10,8 @@ const SiteContext = createContext();
 const initialState = 
   {
     currentSectionIndex: 0,
-    prevTouchY: 0
+    prevTouchY: 0,
+    hamburgerStatus: true,
   }
 
 // Crea un provider che conterrà lo stato globale
