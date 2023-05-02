@@ -20,7 +20,7 @@ const BackButton = () =>
   } else {
     
     return <div className={styles["back-button"]} onClick={handleGoBack}>
-            <img src="./back-arrow.svg" alt="<--"/>
+            <img src="/back-arrow.svg" alt="<--"/>
            </div>
 
     }
