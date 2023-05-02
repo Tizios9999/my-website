@@ -14,8 +14,8 @@ const Slider = ({ blok }) => {
   function splitIntoBadges(elementsList, bgColor) {
     const arr = elementsList.split(", ");
 
-    const badgesList = arr.map((element) => {
-      return <div style={{backgroundColor: bgColor}} className={styles["badge"]}>{element}</div>
+    const badgesList = arr.map((element, i) => {
+      return <div style={{backgroundColor: bgColor}} key={i} className={styles["badge"]}>{element}</div>
     });
 
     return <div className={styles["badges-list"]}>
@@ -36,9 +36,9 @@ const Slider = ({ blok }) => {
             onSwiper={(swiper) => console.log(swiper)}
             className={styles["sw-el"]}
           >
-            {blok.cards.map((card) => {
+            {blok.cards.map((card, i) => {
               return (
-                <SwiperSlide className={styles["card-container"]}>
+                <SwiperSlide className={styles["card-container"]} key={i}>
                     <div className={styles["custom-slide-container"]} style={applyBorderStyle(card.themeColor)}>
                     <div className={styles["card"]}>
                       <img src={card.image.filename} alt="Project Logo" style={applyDropShadowStyle(card.themeColor)}></img>
