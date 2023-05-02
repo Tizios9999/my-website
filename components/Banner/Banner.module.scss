@@ -44,12 +44,8 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
           animation-fill-mode: forwards;
           animation-delay: $turn-on-delay;
 
-          @media only screen and (min-width: 480px) and (max-width: 600px) {
+          @media only screen and (max-width: 600px) {
             font-size: 2em;
-          }
-
-          @media only screen and (max-width: 479px) {
-            font-size: 1.5em;
           }
       }
 

@@ -45,6 +45,9 @@ const Navbar = () =>
 
   useEffect(() => {
     if (menuVisibility) {
+
+      
+
       document.body.style.overflow = "hidden"
     } else {
 

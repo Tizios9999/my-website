@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import applyBorderStyle from '../../assets/js/applyBorderStyle'
 import applyDropShadowStyle from '../../assets/js/applyDropShadowStyle'
 import applyButtonStyle from '../../assets/js/applyButtonStyle'
-import LinkButton from './LinkButton/LinkButton';
 import styles from './Slider.module.scss';
 import 'swiper/css';
 import "swiper/css/navigation";
@@ -37,7 +36,6 @@ const Slider = ({ blok }) => {
             onSwiper={(swiper) => console.log(swiper)}
             className={styles["sw-el"]}
           >
-            {console.log(blok.cards, "Cards")}
             {blok.cards.map((card) => {
               return (
                 <SwiperSlide className={styles["card-container"]}>
