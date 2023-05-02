@@ -18,7 +18,7 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
     overflow-y: hidden;
     min-width: 98%;
     display: flex;
-    flex-flow: column;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -48,6 +48,7 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
     cursor: pointer;
     color: white;
     padding: 10px 20px;
+    margin: 6px;
     border-radius: 5px;
     border: 2px solid red;
     box-shadow: 0 0 6px red,

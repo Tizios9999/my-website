@@ -10,6 +10,7 @@ const About = ({ blok }) => {
             <h2>{blok.title}</h2>
             <p>{blok.description}</p>
             <a href="./blog/about-me"><button className={styles["btn"]}>More about me</button></a>
+            <a href="./blog/"><button className={styles["btn"]}>Visit my blog</button></a>
           </div>
         </div>
 };
