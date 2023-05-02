@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import { storyblokEditable } from "@storyblok/react";
 import styles from "./About.module.scss"
  
