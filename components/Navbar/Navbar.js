@@ -47,7 +47,11 @@ const Navbar = () =>
     if (menuVisibility) {
       document.body.style.overflow = "hidden"
     } else {
-      // document.body.style.overflow = "auto"
+
+        if (pathname !== '/') {
+
+          document.body.style.overflow = "auto"
+        }
     }
   }, [menuVisibility])
 

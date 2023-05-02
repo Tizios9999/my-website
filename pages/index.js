@@ -16,8 +16,8 @@ export default function Home({ story }) {
 
   useEffect(() => {
 
-    console.log("sitesect", siteSections[state.currentSectionIndex])
     scrollToSection(siteSections[state.currentSectionIndex]);
+    document.body.style.overflow = "hidden";
 
   }, [] ) 
 
@@ -81,15 +81,9 @@ export default function Home({ story }) {
         direction = deltaY > 0 ? 'down' : 'up';
       }
 
-      
-
-      console.log("start: ", tsY, " end: ", teY);
-
       // Handle the event based on the direction of the movement
       if (direction === 'down') {
       // Handle downward movement
-
-      console.log("down");
 
       if ((state.currentSectionIndex + 1) < siteSections.length ) {
         dispatch({ type: "UPDATE_CURRENT_SECTION", payload: 1 });
@@ -99,8 +93,6 @@ export default function Home({ story }) {
 
       } else if (direction === 'up') {
       // Handle upward movement
-
-      console.log("up");
 
       if (state.currentSectionIndex > 0 ) {
         dispatch({ type: "UPDATE_CURRENT_SECTION", payload: -1 });
