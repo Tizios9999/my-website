@@ -1,5 +1,5 @@
 //Utilities
-.container{
+.container {
   margin:0 auto;
   width: 90%;
   display:flex;
@@ -9,9 +9,64 @@
 }
 
 //Sections
-.title{
+.title {
   padding-top: var(--navbar-height);
   text-align:center;
   font-size:1.5em;
   font-weight:200;
+}
+
+.filter-title {
+  margin: 0 auto;
+  text-align: center;
+  margin: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filters-section {
+  display: flex;
+  max-height: 0;
+  flex-flow: column;
+  margin: 0 auto;
+  background-color: #030016;
+  width: 50%;
+  overflow: hidden;
+  animation-name: showDiv;
+  animation-duration: 0.35s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.tags-box {
+  
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.tag {
+  text-align: center;
+  margin: 2px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  padding: 3px;
+  border-radius: 5px;
+  border: 1px solid white;
+  user-select: none;
+  cursor: pointer;
+
+}
+
+.active {
+  background-color: white;
+  color: #030016; 
+}
+
+@keyframes showDiv {
+  from {max-height: 0px;}
+  to {max-height: 900px;}
 }

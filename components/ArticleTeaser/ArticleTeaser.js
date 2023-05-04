@@ -4,7 +4,7 @@ import styles from './ArticleTeaser.module.scss';
 import applyBorderStyle from "../../assets/js/applyBorderStyle";
 import applyColorStyle from "../../assets/js/applyColorStyle";
  
-const ArticleTeaser = ({ article, tags }) => {
+const ArticleTeaser = ({ article, tags, onclick }) => {
 return (
   <div>
   <div className={styles["card"]} style={applyBorderStyle(article.theme, 3, 12)}>
@@ -27,7 +27,7 @@ return (
       <div className={styles["tag-wrapper"]}>
       {tags.map((tag, key) => {
         return (
-          <div key={key} className={styles["tag"]} style={{backgroundColor: article.theme}}>{tag}</div>
+          <div key={key} onClick={() => onclick(tag)} className={styles["tag"]} style={{backgroundColor: article.theme, cursor: "pointer"}}>{tag}</div>
         )
       })}
       </div>
