@@ -30,28 +30,7 @@ export default function Home({ story }) {
     // Determine the direction of the movement
     let direction = deltaY > 0 ? 'down' : 'up';
 
-    // Handle the event based on the direction of the movement
-    if (direction === 'down') {
-      // Handle downward movement
-
-      console.log("down");
-
-      if ((state.currentSectionIndex + 1) < siteSections.length ) {
-        dispatch({ type: "UPDATE_CURRENT_SECTION", payload: 1 });
-      }
-
-
-
-    } else if (direction === 'up') {
-      // Handle upward movement
-
-      console.log("up");
-
-      if (state.currentSectionIndex > 0 ) {
-        dispatch({ type: "UPDATE_CURRENT_SECTION", payload: -1 });
-      }
-
-    }
+    moveNextOrPrevSection(direction);
 
     }, 200)
 
@@ -81,7 +60,40 @@ export default function Home({ story }) {
         direction = deltaY > 0 ? 'down' : 'up';
       }
 
-      // Handle the event based on the direction of the movement
+      
+      moveNextOrPrevSection(direction);
+    
+
+    }
+  }
+
+  const handleKeydown = (event) => {
+
+    let direction;
+
+
+      if (event.key === 'ArrowDown') {
+         direction = 'down';
+      }
+
+      if (event.key === 'ArrowUp') {
+        direction = 'up';
+      }
+
+    if (direction === 'up' || direction === 'down' ) {
+
+
+      moveNextOrPrevSection(direction);
+
+
+    }
+
+
+  }
+
+  function moveNextOrPrevSection(direction) {
+
+    // Handle the event based on the direction of the movement
       if (direction === 'down') {
       // Handle downward movement
 
@@ -100,9 +112,6 @@ export default function Home({ story }) {
 
       }
 
-    
-
-    }
   }
 
     scrollToSection(siteSections[state.currentSectionIndex]);
@@ -110,14 +119,14 @@ export default function Home({ story }) {
     window.addEventListener('touchstart', handleSwipe);
     window.addEventListener('touchend', handleSwipe);
     window.addEventListener('wheel', handleScroll);
-    window.addEventListener('keydown', handleScroll);
+    window.addEventListener('keydown', handleKeydown);
     
     // return a cleanup function to remove the event listeners
     return () => {
       window.removeEventListener('touchstart', handleSwipe);
       window.removeEventListener('touchend', handleSwipe);
       window.removeEventListener('wheel', handleScroll);
-      window.removeEventListener('keydown', handleScroll);
+      window.removeEventListener('keydown', handleKeydown);
     };
   }, [state.currentSectionIndex]);
 
