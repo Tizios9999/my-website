@@ -24,6 +24,7 @@ export default function Home({ story }) {
   useEffect(() => {
 
     const handleScroll = debounce((event) => {
+
       let deltaY = 0;
       deltaY = event.deltaY;
     
@@ -43,6 +44,7 @@ export default function Home({ story }) {
     if (event.type === 'touchstart') {
       tsY = event.touches[0].clientY;
       tsX = event.touches[0].clientX;
+
     }
 
     if (event.type === 'touchend') {
