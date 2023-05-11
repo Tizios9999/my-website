@@ -129,8 +129,9 @@ const AllArticles = ({ blok }) => {
       <div className={styles["title"]}>
         <h1>{blok.title}</h1>
       </div>
-      <div className={styles["filter-title"]} onClick={toggleShowTags}>Filter by tag</div>
-  
+        <div className={styles["filter-title-container"]}>
+          <div className={styles["filter-title"]} onClick={toggleShowTags}>Filter by tag</div>
+        </div>
       {showTags && <div className={styles["filters-section"]}>
   
         <div className={styles["tag"]} onClick={() => removeFilters()}>Remove filters</div>
