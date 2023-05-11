@@ -43,6 +43,14 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
   animation: neon_lit $turn-on-speed ease-out;
   animation-fill-mode: forwards;
 
+  @media only screen and (min-width: 361px) and (max-width: 460px) {
+    padding: 40px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    padding: 20px;
+  }
+
   .btn {
     background-color: transparent;
     cursor: pointer;
