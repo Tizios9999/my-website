@@ -60,7 +60,7 @@
 
   }
 
-  	@media only screen and (max-width: 479px) {
+  	@media only screen and (max-width: 479px), (max-height: 600px) {
 
 			--var-neon-size: 8px;
 

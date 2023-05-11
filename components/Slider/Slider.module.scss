@@ -49,6 +49,11 @@
         align-items: center;
         justify-content: center;
         padding: 20px;
+
+        @media only screen and (max-height: 600px) {
+          height: 350px;
+        }
+
       }
       
       .card img {
@@ -88,6 +93,7 @@
         font-size: 16px;
         margin-bottom: 20px;
         min-height: 80px;
+
       }
       
       .card .btn {
@@ -102,5 +108,43 @@
         text-shadow: 0 0 6px white;
       }
       
+}
+
+@media only screen and (max-height: 600px) {
+  .card-container {
+    .card {
+        height: 350px;
+        min-width: 750px;
+
+      }
+      
+      .card img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+        filter: drop-shadow(0 0 3px white);
+      }
+      
+      .card h2 {
+        font-size: 20px;
+      }
+      
+      .card h4 {
+        font-size: 16px;
+      }
+      
+      .card .badges-list {
+        margin-bottom: 2px;
+
+      }
+      
+      .card p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        min-height: 40px;
+
+      }
+      
+}
 }
 
