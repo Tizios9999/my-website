@@ -4,6 +4,7 @@ import { SiteContext } from "../../contexts/SiteContext";
 import { useRouter } from 'next/router';
 import LedPanel from "../LedPanel/LedPanel"
 import BackButton from "../BackButton/BackButton";
+import SectionArrow from "../SectionArrow/SectionArrow";
 import siteSections from "../../assets/data/siteSections";
 import scrollToSection from "../../assets/js/scrollToSection";
 
@@ -63,7 +64,9 @@ const Navbar = () =>
   <nav className={styles["nav-top"]}>
     <BackButton />
     <div className={styles["screen-over-nav"]}>
+      <SectionArrow direction="up" />
       <h1 className={styles["my-name"]}>Davide Santonocito</h1>
+      <SectionArrow direction="down" />
     </div>
   </nav>
   <LedPanel onclick={toggleMenu} />
