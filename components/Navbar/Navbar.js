@@ -47,14 +47,13 @@ const Navbar = () =>
   useEffect(() => {
     if (menuVisibility) {
 
-      
+      document.body.style.overflow = "hidden";
 
-      document.body.style.overflow = "hidden"
     } else {
 
         if (pathname !== '/') {
 
-          document.body.style.overflow = "auto"
+          document.body.style.overflow = "auto";
         }
     }
   }, [menuVisibility])
@@ -64,9 +63,9 @@ const Navbar = () =>
   <nav className={styles["nav-top"]}>
     <BackButton />
     <div className={styles["screen-over-nav"]}>
-      <SectionArrow direction="up" />
+    {pathname === '/' && <SectionArrow direction="up" />}
       <h1 className={styles["my-name"]}>Davide Santonocito</h1>
-      <SectionArrow direction="down" />
+    {pathname === '/' && <SectionArrow direction="down" />}
     </div>
   </nav>
   <LedPanel onclick={toggleMenu} />
