@@ -1,5 +1,6 @@
 import { render } from 'storyblok-rich-text-react-renderer';
 import styles from './Article.module.scss';
+import Image from "next/image";
 import applyBorderStyle from '../../assets/js/applyBorderStyle';
  
 const Article = ({ blok }) => {
@@ -10,7 +11,7 @@ const Article = ({ blok }) => {
       <div className={styles["neon-border"]} style={applyBorderStyle(blok.theme, 12, 2)}>
        
         <div className={styles["article"]}>
-        <img className={styles["icon-img"]} src={blok.image.filename}></img>
+        <Image className={styles["icon-img"]} src={blok.image.filename}/>
           <h1>
             {blok.title}
           </h1>

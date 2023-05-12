@@ -1,4 +1,5 @@
 import styles from "./SectionArrow.module.scss";
+import Image from "next/image";
 import {useEffect, useRef, useContext} from "react";
 import { SiteContext } from "../../contexts/SiteContext";
 import classNames from 'classnames';
@@ -20,7 +21,7 @@ const SectionArrow = ({direction}) => {
 
     return (
             <div ref={arrow}>
-              <img src="arrow-up.svg" className={arrowClasses} onClick={() => moveToNextOrPrevSection(direction, state, dispatch)}/>
+              <Image src="arrow-up.svg" alt={`(go ${direction})`} className={arrowClasses} onClick={() => moveToNextOrPrevSection(direction, state, dispatch)}/>
             </div>
     )
 }

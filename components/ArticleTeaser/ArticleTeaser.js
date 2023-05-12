@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { render } from 'storyblok-rich-text-react-renderer';
 import styles from './ArticleTeaser.module.scss';
 import applyBorderStyle from "../../assets/js/applyBorderStyle";
@@ -8,7 +9,7 @@ const ArticleTeaser = ({ article, tags, onclick }) => {
 return (
   <div>
   <div className={styles["card"]} style={applyBorderStyle(article.theme, 3, 12)}>
-    <img className={styles["icon-img"]} src={article.image.filename}></img>
+    <Image className={styles["icon-img"]} src={article.image.filename}/>
     <h1>
       {article.title}
     </h1>

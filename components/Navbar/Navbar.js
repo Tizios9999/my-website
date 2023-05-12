@@ -2,6 +2,7 @@ import styles from "./Navbar.module.scss"
 import  { useState, useEffect, useContext } from "react"
 import { SiteContext } from "../../contexts/SiteContext";
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 import LedPanel from "../LedPanel/LedPanel"
 import BackButton from "../BackButton/BackButton";
 import SectionArrow from "../SectionArrow/SectionArrow";
@@ -75,7 +76,11 @@ const Navbar = () =>
             <li onClick={() => changeSection(0)}>Home</li>
             <li onClick={() => changeSection(1)}>About Me</li>
             <li onClick={() => changeSection(2)}>My Projects</li>
-            <li><a href="/blog">Blog</a></li>
+            <li>
+              <Link href="/blog" passHref>
+                <a>Blog</a>
+              </Link>
+            </li>
             <li onClick={() => {scrollToSection('contact'), dispatch({ type: "TOGGLE_HAMBURGER_STATUS"}), dispatch({ type: "CHANGE_CURRENT_SECTION", payload: siteSections.length - 1})}}>Contact Me</li>
         </ul>
     </div>
