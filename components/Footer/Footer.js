@@ -12,13 +12,13 @@ const Footer = () => {
                 <p>You can find me on my LinkedIn here below</p>
                 <Link href="https://www.linkedin.com/in/davide-santonocito-36ab84170/" passHref>
                   <a target="_blank" rel="noopener noreferrer">
-                    <Image className={styles["icon"]} src="/linkedin-icon.svg" alt="Linkedin Icon" />
+                  <img className={styles["icon"]} src="/linkedin-icon.svg" alt="Linkedin Icon"/>
                   </a>
                 </Link>
                 <p>...and here below is my Github profile.</p>
                 <Link href="https://github.com/Tizios9999" passHref>
                   <a target="_blank" rel="noopener noreferrer">
-                    <Image className={styles["icon"]} src="/github-icon.svg" alt="Github Link" />
+                    <img className={styles["icon"]} src="/github-icon.svg" alt="Github Link"/>
                   </a>
                 </Link>
                 <p>See you soon! 😃</p>

@@ -4,7 +4,7 @@ import Image from "next/image";
 const Section = ({ blok }) => {
   return <div {...storyblokEditable(blok)}>
             <h1>{blok.title}</h1>
-            <Image src={blok.image.filename} alt={blok.image.name}/>
+            <img src={blok.image.filename} alt={blok.image.name} />
             <p>{blok.description}</p>
         </div>;
 };

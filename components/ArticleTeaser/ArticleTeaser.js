@@ -9,7 +9,7 @@ const ArticleTeaser = ({ article, tags, onclick }) => {
 return (
   <div>
   <div className={styles["card"]} style={applyBorderStyle(article.theme, 3, 12)}>
-    <Image className={styles["icon-img"]} src={article.image.filename}/>
+    <img className={styles["icon-img"]} src={article.image.filename} />
     <h1>
       {article.title}
     </h1>

@@ -42,7 +42,7 @@ const Slider = ({ blok }) => {
                 <SwiperSlide className={styles["card-container"]} key={i}>
                     <div className={styles["custom-slide-container"]} style={applyBorderStyle(card.themeColor)}>
                     <div className={styles["card"]}>
-                      <Image src={card.image.filename} alt="Project Logo" style={applyDropShadowStyle(card.themeColor)}/>
+                      <img src={card.image.filename} alt="Project Logo" style={applyDropShadowStyle(card.themeColor)} />
                       <h2>{card.title}</h2>
                       <h4>Technologies Used:</h4>
                       {splitIntoBadges(card.technologies, card.themeColor)}

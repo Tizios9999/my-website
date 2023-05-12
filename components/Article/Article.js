@@ -11,7 +11,7 @@ const Article = ({ blok }) => {
       <div className={styles["neon-border"]} style={applyBorderStyle(blok.theme, 12, 2)}>
        
         <div className={styles["article"]}>
-        <Image className={styles["icon-img"]} src={blok.image.filename}/>
+        <img className={styles["icon-img"]} src={blok.image.filename}/>
           <h1>
             {blok.title}
           </h1>

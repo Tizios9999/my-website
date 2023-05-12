@@ -21,7 +21,7 @@ const SectionArrow = ({direction}) => {
 
     return (
             <div ref={arrow}>
-              <Image src="arrow-up.svg" alt={`(go ${direction})`} className={arrowClasses} onClick={() => moveToNextOrPrevSection(direction, state, dispatch)}/>
+              <img src="arrow-up.svg" alt=" "  className={arrowClasses} onClick={() => moveToNextOrPrevSection(direction, state, dispatch)}/>
             </div>
     )
 }
