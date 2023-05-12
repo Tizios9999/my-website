@@ -5,6 +5,7 @@ import { useEffect, useContext } from "react";
 import { SiteContext } from "../contexts/SiteContext";
 import siteSections from "../assets/data/siteSections";
 import scrollToSection from "../assets/js/scrollToSection";
+import moveToNextOrPrevSection from "../assets/js/moveToNextOrPrevSection";
 import { debounce } from "lodash";
  
 import { getStoryblokApi , StoryblokComponent,  useStoryblokState,} from "@storyblok/react"
@@ -31,7 +32,7 @@ export default function Home({ story }) {
     // Determine the direction of the movement
     let direction = deltaY > 0 ? 'down' : 'up';
 
-    moveNextOrPrevSection(direction);
+    moveToNextOrPrevSection(direction, state, dispatch);
 
     }, 200)
 
@@ -63,7 +64,7 @@ export default function Home({ story }) {
       }
 
       
-      moveNextOrPrevSection(direction);
+      moveToNextOrPrevSection(direction, state, dispatch);
     
 
     }
@@ -85,7 +86,7 @@ export default function Home({ story }) {
     if (direction === 'up' || direction === 'down' ) {
 
 
-      moveNextOrPrevSection(direction);
+      moveToNextOrPrevSection(direction, state, dispatch);
 
 
     }
@@ -93,28 +94,7 @@ export default function Home({ story }) {
 
   }
 
-  function moveNextOrPrevSection(direction) {
-
-    // Handle the event based on the direction of the movement
-      if (direction === 'down') {
-      // Handle downward movement
-
-      if ((state.currentSectionIndex + 1) < siteSections.length ) {
-        dispatch({ type: "UPDATE_CURRENT_SECTION", payload: 1 });
-      }
-
-
-
-      } else if (direction === 'up') {
-      // Handle upward movement
-
-      if (state.currentSectionIndex > 0 ) {
-        dispatch({ type: "UPDATE_CURRENT_SECTION", payload: -1 });
-      }
-
-      }
-
-  }
+ 
 
     scrollToSection(siteSections[state.currentSectionIndex]);
 

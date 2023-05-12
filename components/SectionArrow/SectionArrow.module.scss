@@ -9,6 +9,15 @@
     }
 }
 
-.down {
+.down-direction {
     transform: rotate(180deg);
+}
+
+.active {
+    filter: drop-shadow(0 0 1px yellow);
+    cursor: pointer;
+}
+
+.inactive {
+    filter: brightness(50%);
 }
