@@ -137,7 +137,7 @@ const AllArticles = ({ blok }) => {
         <div className={styles["tag"]} onClick={() => removeFilters()}>Remove filters</div>
   
         <div className={styles["tags-box"]}>
-          {checkboxes.map(box, index => {
+          {checkboxes.map((box, index) => {
             return <div key={index} onClick={() => toggleFilter(box.tagName)} className={`${styles["tag"]} ${box.active && styles["active"]}`}>{box.tagName}</div>
           })}
         </div>

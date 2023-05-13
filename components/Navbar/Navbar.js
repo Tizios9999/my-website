@@ -76,7 +76,7 @@ const Navbar = () =>
             <li onClick={() => changeSection(0)}>Home</li>
             <li onClick={() => changeSection(1)}>About Me</li>
             <li onClick={() => changeSection(2)}>My Projects</li>
-            <li>
+            <li onClick={() => dispatch({ type: "TOGGLE_HAMBURGER_STATUS"})}>
               <Link href="/blog" passHref>
                 <a>Blog</a>
               </Link>
