@@ -15,7 +15,7 @@ const AllArticles = ({ blok }) => {
     const getArticles = async () => {
       const storyblokApi = getStoryblokApi();
       const { data } = await storyblokApi.get(`cdn/stories`, {
-        version: "draft", // or 'published'
+        version: "published", // or 'draft'
         starts_with: 'blog/',
         is_startpage: false
       });
