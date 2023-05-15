@@ -24,7 +24,7 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
     height: 100vh;
 
     @media only screen and (max-width: 480px) {
-      padding-top:calc(var(--navbar-height) + 70px);
+      padding-top:calc(var(--navbar-height) + 100px);
     }   
   }
 
