@@ -20,7 +20,7 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
   height: 100vh;
   margin-bottom: 50px;
   @media only screen and (max-width: 480px) {
-    height:calc(100vh - 20px);
+    height:calc(100vh - 50px);
   }
 }
 
@@ -82,11 +82,11 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
           animation-fill-mode: forwards;
           animation-delay: $turn-on-delay;
 
-          @media only screen and (min-width: 480px) and (max-width: 600px) {
+          @media only screen and (min-width: 500px) and (max-width: 600px) {
             font-size: 3em;
           }
 
-          @media only screen and (max-width: 479px), (max-height: 600px) {
+          @media only screen and (max-width: 499px), (max-height: 600px) {
             font-size: 2.2em;
           }
 
