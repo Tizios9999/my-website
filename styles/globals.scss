@@ -100,6 +100,10 @@ body {
 	background: #050024;
 	overflow: hidden;
 	caret-color: transparent;
+
+	@media only screen and (max-width: 600px) {
+		overflow: auto;
+	}	
 }
 a {
 	color: inherit;
