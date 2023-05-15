@@ -50,6 +50,7 @@ export default function Home({ story }) {
     }
 
     if (event.type === 'touchend') {
+      event.preventDefault();
       const teY = event.changedTouches[0].clientY;
       const teX = event.changedTouches[0].clientX;
 
