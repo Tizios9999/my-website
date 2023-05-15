@@ -43,6 +43,7 @@ export default function Home({ story }) {
     let deltaY, deltaX = 0;
 
     if (event.type === 'touchstart') {
+      event.preventDefault();
       tsY = event.touches[0].clientY;
       tsX = event.touches[0].clientX;
 
