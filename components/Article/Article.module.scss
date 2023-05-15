@@ -54,6 +54,7 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
 
     a {
       color: yellow;
+      word-wrap: break-word;
     }
 
     .icon-img {
