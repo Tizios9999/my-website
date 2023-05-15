@@ -100,15 +100,15 @@ export default function Home({ story }) {
 
     scrollToSection(siteSections[state.currentSectionIndex]);
 
-    window.addEventListener('touchstart', handleSwipe);
-    window.addEventListener('touchend', handleSwipe);
+    // window.addEventListener('touchstart', handleSwipe);
+    // window.addEventListener('touchend', handleSwipe);
     window.addEventListener('wheel', handleScroll);
     window.addEventListener('keydown', handleKeydown);
     
     // return a cleanup function to remove the event listeners
     return () => {
-      window.removeEventListener('touchstart', handleSwipe);
-      window.removeEventListener('touchend', handleSwipe);
+      // window.removeEventListener('touchstart', handleSwipe);
+      // window.removeEventListener('touchend', handleSwipe);
       window.removeEventListener('wheel', handleScroll);
       window.removeEventListener('keydown', handleKeydown);
     };
