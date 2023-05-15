@@ -45,6 +45,10 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
         inset 0 0 25px $neon-color-lit,
         0 0 2px white,
         inset 0 0 2px white;
+
+        @media only screen and (max-width: 480px) {
+          height: calc(100vh - 130px - $neon-size);
+        }
       }
 
 .icon {
