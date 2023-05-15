@@ -19,6 +19,9 @@ $text-off: rgb($text-rgb1*0.5, $text-rgb2*0.5, $text-rgb3*0.5);
   padding-top: calc(var(--navbar-height) + 20px);
   height: 100vh;
   margin-bottom: 50px;
+  @media only screen and (max-width: 480px) {
+    height:calc(100vh - 20px);
+  }
 }
 
 
