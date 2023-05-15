@@ -135,7 +135,7 @@ export async function getStaticProps() {
  
   // load the draft version
   let sbParams = {
-    version: "published", // or 'draft'
+    version: "draft", // or 'draft'
   };
  
   const storyblokApi = getStoryblokApi();

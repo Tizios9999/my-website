@@ -32,7 +32,7 @@ export async function getStaticProps({ params }) {
   let slug = params.slug ? params.slug.join("/") : "home";
  
   let sbParams = {
-    version: "published", // or 'draft'
+    version: "draft", // or 'draft'
   };
  
   const storyblokApi = getStoryblokApi();
