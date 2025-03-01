@@ -24,24 +24,13 @@ const Navbar = () => {
 
   function changeSection(id) {
     if (pathname === "/") {
-      dispatch({ type: "CHANGE_CURRENT_SECTION", payload: id });
+      scrollToSection(siteSections[id]);
     } else {
       router.push(`/#${siteSections[id]}`);
-      dispatch({ type: "CHANGE_CURRENT_SECTION", payload: id });
     }
 
     dispatch({ type: "TOGGLE_HAMBURGER_STATUS" });
   }
-
-  useEffect(() => {
-    if (menuVisibility) {
-      document.body.style.overflow = "hidden";
-    } else {
-      if (pathname !== "/") {
-        document.body.style.overflow = "auto";
-      }
-    }
-  }, [menuVisibility]);
 
   return (
     <>
@@ -67,11 +56,7 @@ const Navbar = () => {
               <li
                 onClick={() => {
                   scrollToSection("contact"),
-                    dispatch({ type: "TOGGLE_HAMBURGER_STATUS" }),
-                    dispatch({
-                      type: "CHANGE_CURRENT_SECTION",
-                      payload: siteSections.length - 1,
-                    });
+                    dispatch({ type: "TOGGLE_HAMBURGER_STATUS" });
                 }}
               >
                 Contact Me
