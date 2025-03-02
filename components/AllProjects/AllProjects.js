@@ -17,7 +17,7 @@ const AllProjects = ({ blok }) => {
 
       // Filtra gli articoli che hanno il tag "project" o simili
       const filteredProjects = data.stories.filter(
-        (article) => article.tag_list.includes("Project") // Modifica con il tag corretto
+        (article) => article.tag_list.includes("Projects") // Modifica con il tag corretto
       );
 
       setProjects(
