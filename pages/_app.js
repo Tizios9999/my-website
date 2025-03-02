@@ -1,6 +1,6 @@
-import '../styles/globals.scss'
+import "../styles/globals.scss";
 import { storyblokInit, apiPlugin } from "@storyblok/react";
-import { SiteContextProvider } from '../contexts/SiteContext';
+import { SiteContextProvider } from "../contexts/SiteContext";
 import Feature from "../components/Feature";
 import Grid from "../components/Grid";
 import Page from "../components/Page";
@@ -10,6 +10,7 @@ import Banner from "../components/Banner/Banner";
 import Section from "../components/Section";
 import About from "../components/About/About";
 import Slider from "../components/Slider/Slider";
+import AllProjects from "../components/AllProjects/AllProjects";
 import AllArticles from "../components/AllArticles/AllArticles";
 import ArticleTeaser from "../components/ArticleTeaser/ArticleTeaser";
 
@@ -19,21 +20,21 @@ const components = {
   teaser: Teaser,
   slider: Slider,
   page: Page,
-  article:Article,
+  article: Article,
   banner: Banner,
   section: Section,
   about: About,
-  allArticles : AllArticles,
+  allProjects: AllProjects,
+  allArticles: AllArticles,
   articleTeaser: ArticleTeaser,
 };
- 
 
 function MyApp({ Component, pageProps }) {
   return (
-    <SiteContextProvider> 
+    <SiteContextProvider>
       <Component {...pageProps} />
     </SiteContextProvider>
-  )
+  );
 }
 
 storyblokInit({
@@ -42,4 +43,4 @@ storyblokInit({
   components,
 });
 
-export default MyApp
+export default MyApp;
