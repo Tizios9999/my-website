@@ -32,23 +32,25 @@ const AllProjects = ({ blok }) => {
   }, []);
 
   return (
-    <div className={styles["container"]} {...storyblokEditable(blok)}>
-      <h2>My Projects</h2>
-      <div className={styles["projects-grid"]}>
-        {projects.length > 0 ? (
-          projects.map((project) => (
-            <ProjectTeaser
-              key={project.uuid}
-              article={project.content}
-              tags={project.tag_list}
-              onclick={() => {}}
-            />
-          ))
-        ) : (
-          <p>No projects found.</p>
-        )}
+    <section className={styles["section-container"]} id={"projects"}>
+      <div className={styles["container"]} {...storyblokEditable(blok)}>
+        <h2>My Projects</h2>
+        <div className={styles["projects-grid"]}>
+          {projects.length > 0 ? (
+            projects.map((project) => (
+              <ProjectTeaser
+                key={project.uuid}
+                article={project.content}
+                tags={project.tag_list}
+                onclick={() => {}}
+              />
+            ))
+          ) : (
+            <p>No projects found.</p>
+          )}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
