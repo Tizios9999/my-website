@@ -16,7 +16,7 @@ const Footer = () => {
           passHref
         >
           <a target="_blank" rel="noopener noreferrer">
-            <Image
+            <img
               className={styles["icon"]}
               src="/linkedin-icon.svg"
               alt="Linkedin Icon"
@@ -26,7 +26,7 @@ const Footer = () => {
         <p>...and here below is my Github profile.</p>
         <Link href="https://github.com/Tizios9999" passHref>
           <a target="_blank" rel="noopener noreferrer">
-            <Image
+            <img
               className={styles["icon"]}
               src="/github-icon.svg"
               alt="Github Link"

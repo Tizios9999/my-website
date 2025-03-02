@@ -50,7 +50,7 @@ const Slider = ({ blok }) => {
                     style={applyBorderStyle(card.themeColor)}
                   >
                     <div className={styles["card"]}>
-                      <Image
+                      <img
                         src={card.image.filename}
                         alt="Project Logo"
                         style={applyDropShadowStyle(card.themeColor)}
