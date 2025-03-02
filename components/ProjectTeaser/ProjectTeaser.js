@@ -22,8 +22,9 @@ const ProjectTeaser = ({ article, tags, onclick }) => {
             </a>
           </Link>
           <div className={styles["tag-wrapper"]}>
-            {tags.map((tag, key) => {
-              return (
+            {tags
+              .filter((tag) => tag.toLowerCase() !== "projects") // Escludi "Projects"
+              .map((tag, key) => (
                 <div
                   key={key}
                   onClick={() => onclick(tag)}
@@ -32,8 +33,7 @@ const ProjectTeaser = ({ article, tags, onclick }) => {
                 >
                   {tag}
                 </div>
-              );
-            })}
+              ))}
           </div>
         </div>
       </div>
