@@ -12,6 +12,7 @@ import About from "../components/About/About";
 import Slider from "../components/Slider/Slider";
 import AllProjects from "../components/AllProjects/AllProjects";
 import AllArticles from "../components/AllArticles/AllArticles";
+import ProjectTeaser from "../components/ProjectTeaser/ProjectTeaser";
 import ArticleTeaser from "../components/ArticleTeaser/ArticleTeaser";
 
 const components = {
@@ -26,6 +27,7 @@ const components = {
   about: About,
   allProjects: AllProjects,
   allArticles: AllArticles,
+  projectTeaser: ProjectTeaser,
   articleTeaser: ArticleTeaser,
 };
 

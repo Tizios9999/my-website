@@ -1,6 +1,6 @@
 import { getStoryblokApi, storyblokEditable } from "@storyblok/react";
 import { useState, useEffect } from "react";
-import ArticleTeaser from "../ArticleTeaser/ArticleTeaser"; // Oppure ProjectTeaser se vuoi personalizzarlo
+import ProjectTeaser from "../ProjectTeaser/ProjectTeaser";
 import styles from "./AllProjects.module.scss";
 
 const AllProjects = ({ blok }) => {
@@ -37,7 +37,7 @@ const AllProjects = ({ blok }) => {
       <div className={styles["projects-grid"]}>
         {projects.length > 0 ? (
           projects.map((project) => (
-            <ArticleTeaser
+            <ProjectTeaser
               key={project.uuid}
               article={project.content}
               tags={project.tag_list}
