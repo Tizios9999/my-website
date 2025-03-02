@@ -15,8 +15,6 @@ export default function Home({ story }) {
 
   const [state, dispatch] = useContext(SiteContext);
 
-=======
->>>>>>> develop
   return (
     <div className={styles.container}>
       <Head>
